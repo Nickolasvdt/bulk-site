@@ -90,7 +90,7 @@ export function Hero() {
           className="font-display font-semibold text-[clamp(38px,5.5vw,68px)] leading-[0.93] tracking-[-0.03em] max-w-3xl"
         >
           Presença digital<br />
-          <span className="italic text-bg/45">que vende</span><br />
+          <span className="italic text-accent">que vende</span><br />
           todo dia.
         </motion.h1>
 
