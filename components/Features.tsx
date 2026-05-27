@@ -73,7 +73,7 @@ export function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-5%" }}
           transition={{ duration: 0.4, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-3 bg-ink text-bg rounded-xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4
+          className="mt-3 bg-accent text-bg rounded-xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4
                      hover:-translate-y-0.5 transition-transform duration-200 ease-out"
         >
           <div className="flex items-center gap-4">

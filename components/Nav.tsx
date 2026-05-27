@@ -54,7 +54,7 @@ export function Nav() {
           <a
             href="#contato"
             className={`hidden md:inline-flex items-center gap-1 px-4 py-2 rounded-md text-[12px] font-medium transition-colors ${
-              scrolled ? "bg-ink text-bg hover:bg-accent" : "bg-bg text-ink hover:bg-accent hover:text-bg"
+              scrolled ? "bg-accent text-bg hover:bg-[#420000]" : "bg-bg text-ink hover:bg-accent hover:text-bg"
             }`}
           >
             Falar com a Bulk
@@ -88,7 +88,7 @@ export function Nav() {
               <a
                 href="#contato"
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-center bg-ink text-bg rounded-md py-3 text-[13px] font-medium"
+                className="flex items-center justify-center bg-accent text-bg rounded-md py-3 text-[13px] font-medium"
               >
                 Falar com a Bulk →
               </a>

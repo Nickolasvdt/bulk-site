@@ -75,7 +75,7 @@ export function Pricing() {
               transition={{ duration: 0.4, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
               className={`rounded-xl p-6 flex flex-col gap-6 transition-all duration-200 cursor-pointer
                 ${tier.recommended
-                  ? "bg-ink text-bg hover:-translate-y-1"
+                  ? "bg-accent text-bg hover:-translate-y-1"
                   : "bg-ink/[0.04] hover:bg-ink/[0.07] hover:-translate-y-1"
                 }`}
             >
@@ -111,7 +111,7 @@ export function Pricing() {
                 </p>
                 <div className={`text-center py-2.5 rounded-md text-[12px] font-medium transition-colors duration-150
                   ${tier.recommended
-                    ? "bg-bg text-ink hover:bg-accent hover:text-bg"
+                    ? "bg-bg text-ink hover:bg-[#420000] hover:text-bg"
                     : "bg-ink text-bg hover:bg-accent"
                   }`}>
                   Solicitar proposta →

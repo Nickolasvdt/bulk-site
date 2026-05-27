@@ -33,7 +33,7 @@ export function StickyBar() {
             </div>
             <a
               href="#contato"
-              className="shrink-0 inline-flex items-center gap-1.5 bg-ink text-bg px-5 py-2.5 rounded-md text-[12px] font-medium hover:bg-accent transition-colors whitespace-nowrap"
+              className="shrink-0 inline-flex items-center gap-1.5 bg-accent text-bg px-5 py-2.5 rounded-md text-[12px] font-medium hover:bg-[#420000] transition-colors whitespace-nowrap"
             >
               Faça seu orçamento →
             </a>
