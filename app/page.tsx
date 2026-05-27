@@ -13,8 +13,10 @@ export default function Home() {
   return (
     <main className="bg-bg text-ink">
       <Nav />
-      <Hero />
-      <LogoMarquee />
+      <div className="min-h-screen flex flex-col">
+        <Hero />
+        <LogoMarquee />
+      </div>
       <Features />
       <Cases />
       <Pricing />
