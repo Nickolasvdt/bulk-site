@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const cases = [
   {
@@ -8,12 +9,14 @@ const cases = [
     name: "Carlos S.",
     role: "Barbearia CS · São Paulo",
     metric: "Agenda cheia",
+    avatar: "/images/avatar-carlos.jpg",
   },
   {
     quote: "Minha loja ficava invisível no Google. Depois que a Bulk configurou o Google Meu Negócio, o cliente que precisa me acha sozinho. Não dependo mais só do boca a boca.",
     name: "Ana Lima",
     role: "Moda Lima · Interior SP",
     metric: "Pág. 1",
+    avatar: "/images/avatar-ana.jpg",
   },
 ];
 
@@ -47,9 +50,20 @@ export function Cases() {
                 "{c.quote}"
               </p>
               <div className="flex items-end justify-between">
-                <div>
-                  <p className="text-[13px] font-medium">{c.name}</p>
-                  <p className="text-[11px] text-mute mt-0.5">{c.role}</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 bg-ink/10">
+                    <Image
+                      src={c.avatar}
+                      alt={c.name}
+                      width={36}
+                      height={36}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-[13px] font-medium">{c.name}</p>
+                    <p className="text-[11px] text-mute mt-0.5">{c.role}</p>
+                  </div>
                 </div>
                 <span className="font-display font-semibold text-[20px] leading-none tracking-[-0.02em] text-accent">
                   {c.metric}

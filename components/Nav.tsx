@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const links = [
   { label: "Como funciona", href: "#como-funciona" },
@@ -31,9 +32,12 @@ export function Nav() {
     >
       <div className={`max-w-6xl mx-auto px-6 md:px-8 flex items-center justify-between h-14 ${textColor}`}>
         <a href="#" className="leading-none">
-          <img
+          <Image
             src="/logo.png"
             alt="Bulk"
+            width={80}
+            height={32}
+            priority
             className={`h-8 w-auto transition-all duration-300 ${scrolled ? "brightness-0" : "brightness-100"}`}
           />
         </a>

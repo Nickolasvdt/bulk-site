@@ -31,6 +31,7 @@ const config: Config = {
         "marquee-slow": "marquee 80s linear infinite",
         "spin-slow": "spin 60s linear infinite",
         "pulse-dot": "pulseDot 1.6s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
       },
       keyframes: {
         marquee: {
@@ -40,6 +41,10 @@ const config: Config = {
         pulseDot: {
           "0%, 100%": { opacity: "1", transform: "scale(1)" },
           "50%": { opacity: "0.4", transform: "scale(0.85)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
       },
     },

@@ -13,18 +13,18 @@ const brands = [
 
 export function LogoMarquee() {
   return (
-    <section className="border-y border-ink/[0.07] py-6 overflow-hidden">
+    <section className="border-y border-ink/[0.07] py-7 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 md:px-8 mb-5">
         <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-mute">
           Onde seus clientes te encontram
         </p>
       </div>
 
-      <Marquee speed="slow" pauseOnHover>
+      <Marquee speed="normal" pauseOnHover>
         {brands.map((brand) => (
           <div
             key={brand.slug}
-            className="flex items-center mx-10 text-ink/20 hover:text-ink/50 transition-colors duration-200"
+            className="flex items-center mx-10 text-ink/30 hover:text-ink/60 transition-colors duration-200"
           >
             <svg
               viewBox="0 0 24 24"
