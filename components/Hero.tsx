@@ -100,7 +100,7 @@ export function Hero() {
           transition={{ delay: 0.45, duration: 0.5 }}
           className="mt-8 flex flex-col md:flex-row md:items-center gap-7 max-w-4xl"
         >
-          <p className="text-[14px] leading-[1.65] text-bg/40 max-w-[360px]">
+          <p className="text-[14px] leading-[1.65] text-bg/55 max-w-[360px]">
             Site profissional, IA no WhatsApp e Google Meu Negócio.
             Seu negócio encontrado e faturando todo dia.
           </p>

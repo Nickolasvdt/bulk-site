@@ -15,7 +15,7 @@ export function Footer() {
           <div className="flex flex-wrap gap-12">
             <div>
               <p className="text-[10px] font-mono tracking-[0.16em] uppercase text-mute mb-4">Serviços</p>
-              <ul className="space-y-2.5 text-[13px] text-ink/50">
+              <ul className="space-y-2.5 text-[13px] text-ink/65">
                 <li><a href="#como-funciona" className="hover:text-ink transition-colors">Sites</a></li>
                 <li><a href="#como-funciona" className="hover:text-ink transition-colors">IA no WhatsApp</a></li>
                 <li><a href="#como-funciona" className="hover:text-ink transition-colors">Google Meu Negócio</a></li>
@@ -23,7 +23,7 @@ export function Footer() {
             </div>
             <div>
               <p className="text-[10px] font-mono tracking-[0.16em] uppercase text-mute mb-4">Empresa</p>
-              <ul className="space-y-2.5 text-[13px] text-ink/50">
+              <ul className="space-y-2.5 text-[13px] text-ink/65">
                 <li><a href="#planos" className="hover:text-ink transition-colors">Planos</a></li>
                 <li><a href="#casos" className="hover:text-ink transition-colors">Casos</a></li>
                 <li><a href="#contato" className="hover:text-ink transition-colors">Contato</a></li>
@@ -31,7 +31,7 @@ export function Footer() {
             </div>
             <div>
               <p className="text-[10px] font-mono tracking-[0.16em] uppercase text-mute mb-4">Contato</p>
-              <ul className="space-y-2.5 text-[13px] text-ink/50">
+              <ul className="space-y-2.5 text-[13px] text-ink/65">
                 <li><a href="mailto:bulkstudio1@gmail.com" className="hover:text-ink transition-colors">bulkstudio1@gmail.com</a></li>
                 <li><a href="https://wa.me/5511999287779" className="hover:text-ink transition-colors">(11) 99928-7779</a></li>
               </ul>

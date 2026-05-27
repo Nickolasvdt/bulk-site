@@ -21,7 +21,7 @@ export function FinalCTA() {
             <h2 className="font-display font-semibold text-[clamp(28px,4vw,52px)] leading-[1.0] tracking-[-0.025em]">
               Bora colocar seu<br />negócio no mapa?
             </h2>
-            <p className="mt-5 text-[14px] leading-[1.65] text-bg/40 max-w-[360px]">
+            <p className="mt-5 text-[14px] leading-[1.65] text-bg/55 max-w-[360px]">
               15 minutos de diagnóstico. A gente analisa seu negócio, sua região e sua concorrência — de graça.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
