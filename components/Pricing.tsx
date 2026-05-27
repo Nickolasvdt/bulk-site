@@ -85,7 +85,7 @@ export function Pricing() {
                     {tier.scope}
                   </p>
                   {tier.recommended && (
-                    <span className="text-[10px] font-mono tracking-[0.12em] uppercase text-accent shrink-0">★ Melhor</span>
+                    <span className="text-[10px] font-mono tracking-[0.12em] uppercase text-bg/60 shrink-0">★ Melhor</span>
                   )}
                 </div>
                 <h3 className="font-display font-semibold text-[20px] tracking-[-0.02em] leading-none">
@@ -99,7 +99,7 @@ export function Pricing() {
               <ul className="space-y-2 flex-1">
                 {tier.features.map((f) => (
                   <li key={f} className={`flex items-start gap-2 text-[12px] ${tier.recommended ? "text-bg/55" : "text-mute"}`}>
-                    <span className="text-accent mt-px shrink-0">✓</span>
+                    <span className={`${tier.recommended ? "text-bg/70" : "text-accent"} mt-px shrink-0`}>✓</span>
                     {f}
                   </li>
                 ))}

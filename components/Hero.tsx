@@ -31,7 +31,7 @@ function PhoneMockup() {
       <rect x="16" y="44" width="74" height="6" rx="3" fill="currentColor" fillOpacity="0.10" />
       <rect x="16" y="55" width="56" height="6" rx="3" fill="currentColor" fillOpacity="0.07" />
       {/* CTA button */}
-      <rect x="16" y="70" width="46" height="14" rx="4" fill="#FF5C28" fillOpacity="0.80" />
+      <rect x="16" y="70" width="46" height="14" rx="4" fill="#610000" fillOpacity="0.80" />
       {/* Divider */}
       <rect x="16" y="96" width="96" height="0.75" fill="currentColor" fillOpacity="0.07" />
       {/* Cards */}
@@ -46,7 +46,7 @@ function PhoneMockup() {
       <rect x="24" y="163" width="54" height="3" rx="1.5" fill="currentColor" fillOpacity="0.08" />
       <rect x="24" y="170" width="38" height="3" rx="1.5" fill="currentColor" fillOpacity="0.06" />
       {/* Sun dot accent in testimonial */}
-      <circle cx="105" cy="166" r="6" fill="#FFC93B" fillOpacity="0.45" />
+      <circle cx="105" cy="166" r="6" fill="#540000" fillOpacity="0.55" />
       {/* WhatsApp notification */}
       <circle cx="104" cy="26" r="7.5" fill="#22C55E" fillOpacity="0.88" />
       <rect x="101.5" y="24" width="5" height="1.5" rx="0.75" fill="white" fillOpacity="0.9" />

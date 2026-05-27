@@ -77,7 +77,7 @@ export function Features() {
                      hover:-translate-y-0.5 transition-transform duration-200 ease-out"
         >
           <div className="flex items-center gap-4">
-            <span className="font-display font-semibold text-[24px] leading-none text-accent shrink-0">+</span>
+            <span className="font-display font-semibold text-[24px] leading-none text-bg/50 shrink-0">+</span>
             <div>
               <p className="text-[14px] font-medium">Manutenção mensal inclusa</p>
               <p className="text-[12px] text-bg/40 mt-0.5">Atualizações, relatório mensal, suporte. Nada quebrado, nada desatualizado.</p>

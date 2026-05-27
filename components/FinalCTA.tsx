@@ -71,7 +71,7 @@ export function FinalCTA() {
               <div>Resposta em até 4h úteis</div>
               <div>Seg–Sex · 9h–19h</div>
               <div>Site no ar em 7 dias</div>
-              <div className="text-accent/60">Vagas limitadas</div>
+              <div className="text-bg/40">Vagas limitadas</div>
             </motion.div>
           </div>
 

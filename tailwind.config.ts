@@ -8,12 +8,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#FBF8F2",      // warm off-white
-        ink: "#0F0E0C",     // near-black, slightly warm
-        mute: "#6B6862",    // muted brown-grey
-        accent: "#FF5C28",  // confident warm orange
-        sun: "#FFC93B",     // yellow accent for highlights/badges
-        rule: "#0F0E0C14",  // hairline color (ink at 8%)
+        bg: "#FFFFFF",      // white
+        ink: "#050707",     // brand near-black
+        mute: "#6B6B6B",    // neutral grey
+        accent: "#610000",  // brand deep red
+        sun: "#420000",     // brand darkest red
+        rule: "#05070714",  // ink at 8%
       },
       fontFamily: {
         display: ["var(--font-display)", "ui-serif", "Georgia"],

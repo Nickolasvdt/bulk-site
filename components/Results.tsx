@@ -67,7 +67,7 @@ export function Results() {
             <div
               className={`col-span-12 md:col-span-4 font-display leading-[0.85] tracking-tightest ${
                 s.italic ? "italic" : ""
-              } ${s.accent ? "text-accent" : "text-bg"}`}
+              } ${s.accent ? "text-bg" : "text-bg/60"}`}
               style={{ fontSize: "clamp(52px, 6vw, 100px)" }}
             >
               {s.num}
