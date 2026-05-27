@@ -80,7 +80,7 @@ export function Hero() {
           transition={{ delay: 0.15, duration: 0.5 }}
           className="text-[11px] font-mono tracking-[0.2em] uppercase text-bg/30 mb-8"
         >
-          Agência digital · São Paulo
+          Agência digital <span className="text-accent">·</span> São Paulo
         </motion.p>
 
         <motion.h1
@@ -110,17 +110,17 @@ export function Hero() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               transition={{ duration: 0.15 }}
-              className="inline-flex items-center gap-1.5 bg-bg text-ink px-5 py-2.5 rounded-md text-[13px] font-medium hover:bg-accent hover:text-bg transition-colors"
+              className="inline-flex items-center gap-1.5 bg-accent text-bg px-5 py-2.5 rounded-md text-[13px] font-medium hover:bg-[#420000] transition-colors"
             >
               Agendar diagnóstico →
             </motion.a>
-            <a href="#como-funciona" className="text-[12px] text-bg/30 hover:text-bg/55 transition-colors">
+            <a href="#como-funciona" className="text-[12px] text-bg/30 hover:text-accent transition-colors">
               Como funciona ↓
             </a>
           </div>
         </motion.div>
 
-        <div className="mt-14 md:mt-18 pt-6 border-t border-bg/[0.08] grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-14 md:mt-18 pt-6 border-t border-accent/25 grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((s, i) => (
             <motion.div
               key={i}
@@ -128,7 +128,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.65 + i * 0.08, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="font-display font-semibold text-[26px] md:text-[30px] leading-none tracking-[-0.03em]">
+              <div className="font-display font-semibold text-[26px] md:text-[30px] leading-none tracking-[-0.03em] text-accent">
                 {s.value}
               </div>
               <div className="mt-1.5 text-[10px] font-mono tracking-[0.16em] uppercase text-bg/30">
