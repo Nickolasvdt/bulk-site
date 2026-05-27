@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function FinalCTA() {
   return (
-    <section id="contato" className="py-16 md:py-24 bg-[#420000] text-bg">
+    <section id="contato" className="py-16 md:py-24 bg-ink text-bg">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
 

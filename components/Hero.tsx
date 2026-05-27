@@ -59,7 +59,7 @@ function PhoneMockup() {
 
 export function Hero() {
   return (
-    <section className="bg-[#420000] text-bg">
+    <section className="bg-ink text-bg">
       <div className="max-w-6xl mx-auto px-6 md:px-8 pt-28 pb-16 md:pt-32 md:pb-20 relative">
 
         {/* Phone mockup — desktop only, decorative */}
