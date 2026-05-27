@@ -59,8 +59,8 @@ function PhoneMockup() {
 
 export function Hero() {
   return (
-    <section className="bg-ink text-bg flex-1">
-      <div className="max-w-6xl mx-auto px-6 md:px-8 pt-28 pb-16 md:pt-32 md:pb-20 relative">
+    <section className="bg-ink text-bg flex-1 flex flex-col justify-center">
+      <div className="max-w-6xl mx-auto px-6 md:px-8 pt-20 pb-12 md:pt-24 md:pb-14 relative">
 
         {/* Phone mockup — desktop only, decorative */}
         <motion.div
