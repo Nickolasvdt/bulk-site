@@ -1,22 +1,29 @@
 "use client";
 
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const features = [
   {
     stat: "7 dias",
     tag: "Site profissional",
     desc: "Design sob medida, mobile-first, velocidade máxima. No ar em 7 dias, com domínio e hospedagem inclusos.",
+    photo: "https://plus.unsplash.com/premium_photo-1661766521984-e7469a450b6f?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Dona de cafeteria sorrindo na porta do negócio",
   },
   {
     stat: "24h",
     tag: "IA no WhatsApp",
     desc: "Agente que responde, qualifica e agenda pelo WhatsApp. Domingo às 23h, o cliente manda mensagem — a IA atende.",
+    photo: "https://images.unsplash.com/photo-1563986768817-257bf91c5753?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Empreendedor sorrindo ao ver mensagens no celular",
   },
   {
     stat: "Pág. 1",
     tag: "Google Meu Negócio",
     desc: "Configurado e otimizado. Quando alguém pesquisa o seu serviço perto de você, você aparece primeiro.",
+    photo: "https://plus.unsplash.com/premium_photo-1682088367648-735b1a6ac612?auto=format&fit=crop&w=800&q=80",
+    photoAlt: "Proprietária de loja preparando pedidos com satisfação",
   },
 ];
 
@@ -25,13 +32,13 @@ export function Features() {
     <section id="como-funciona" className="py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6 md:px-8">
 
-        {/* Header animado */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-8%" }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-4"
         >
           <div>
             <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-mute mb-3">
@@ -46,23 +53,41 @@ export function Features() {
           </p>
         </motion.div>
 
-        {/* 3 cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        {/* Alternating feature rows — sem cards */}
+        <div>
           {features.map((f, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 14, scale: 0.98 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-5%" }}
-              transition={{ duration: 0.4, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-ink/[0.04] rounded-xl p-6 flex flex-col justify-between gap-10
-                         hover:-translate-y-1 transition-transform duration-200 ease-out"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-6%" }}
+              transition={{ duration: 0.55, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+              className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}
+                items-center gap-10 md:gap-16 py-14 border-b border-ink/[0.07] last:border-0`}
             >
-              <div className="flex items-start justify-between">
-                <span className="text-[11px] font-mono tracking-[0.16em] uppercase text-mute">{f.tag}</span>
-                <span className="font-display font-semibold text-[28px] leading-none tracking-[-0.03em] text-accent">{f.stat}</span>
+              {/* Foto */}
+              <div className="relative w-full md:w-[46%] aspect-[4/3] rounded-2xl overflow-hidden shrink-0">
+                <Image
+                  src={f.photo}
+                  alt={f.photoAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 46vw"
+                />
               </div>
-              <p className="text-[13px] leading-[1.65] text-mute">{f.desc}</p>
+
+              {/* Conteúdo */}
+              <div className="flex-1">
+                <span className="text-[10px] font-mono tracking-[0.18em] uppercase text-mute">
+                  {f.tag}
+                </span>
+                <div className="font-display font-semibold text-[clamp(48px,6vw,80px)] leading-none tracking-[-0.04em] text-accent mt-3 mb-5">
+                  {f.stat}
+                </div>
+                <p className="text-[15px] leading-[1.65] text-mute max-w-[360px]">
+                  {f.desc}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -72,9 +97,8 @@ export function Features() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-5%" }}
-          transition={{ duration: 0.4, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-3 bg-accent text-bg rounded-xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4
-                     hover:-translate-y-0.5 transition-transform duration-200 ease-out"
+          transition={{ duration: 0.4, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-8 bg-accent text-bg rounded-xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
         >
           <div className="flex items-center gap-4">
             <span className="font-display font-semibold text-[24px] leading-none text-bg/50 shrink-0">+</span>

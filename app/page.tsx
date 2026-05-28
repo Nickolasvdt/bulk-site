@@ -1,6 +1,7 @@
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { LogoMarquee } from "@/components/LogoMarquee";
+import { SocialProofBand } from "@/components/SocialProofBand";
 import { Features } from "@/components/Features";
 import { Cases } from "@/components/Cases";
 import { Pricing } from "@/components/Pricing";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <LogoMarquee />
       </div>
+      <SocialProofBand />
       <Features />
       <Cases />
       <Pricing />
