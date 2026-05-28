@@ -1,4 +1,4 @@
-# Atlas — Landing de Prospecção B2B
+# Bulk Institucional — Site Institucional B2B
 
 Landing page editorial inspirada em kittl.com. Stack: Next.js 15, Tailwind, motion, Lenis.
 
