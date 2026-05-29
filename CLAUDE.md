@@ -3,7 +3,7 @@
 ## Projeto
 Site institucional da **Bulk**, agência digital focada em presença digital para negócios locais em São Paulo.
 
-**Repositório:** `atlas-prospect` (nome legado — renomear para `bulk-website`)
+**Repositório:** `bulk-website`
 **Branch de trabalho:** `feat/g4-style-homepage`
 
 ---
