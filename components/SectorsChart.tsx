@@ -4,12 +4,12 @@ import { useRef } from "react";
 import { useInView, motion } from "motion/react";
 
 const sectors = [
-  { name: "Outros",      pct: 9,  height: 20 },
   { name: "Automotivo",  pct: 6,  height: 25 },
   { name: "Fitness",     pct: 8,  height: 32 },
-  { name: "Saúde",       pct: 10, height: 40 },
+  { name: "Outros",      pct: 9,  height: 36 },
+  { name: "Saúde",       pct: 11, height: 45 },
   { name: "Varejo",      pct: 12, height: 50 },
-  { name: "Beleza",      pct: 15, height: 62 },
+  { name: "Beleza",      pct: 14, height: 60 },
   { name: "Alimentação", pct: 18, height: 76 },
   { name: "Serviços",    pct: 22, height: 100 },
 ];
@@ -30,7 +30,7 @@ export function SectorsChart() {
             <span className="font-display italic text-accent">mais crescemos.</span>
           </h2>
           <p className="text-[13px] text-mute mt-3">
-            Os tipos de negócio que mais prosperaram com a Bulk
+            Distribuição da nossa base de 200+ negócios atendidos em São Paulo
           </p>
         </div>
 

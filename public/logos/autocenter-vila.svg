@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none">
+  <path d="M4 38 L16 10 L28 38" stroke="#1a1a1a" stroke-width="3" fill="none" stroke-linejoin="round"/>
+  <line x1="9" y1="28" x2="23" y2="28" stroke="#1a1a1a" stroke-width="2.5"/>
+  <text x="38" y="27" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">AutoCenter</text>
+  <text x="38" y="40" font-family="Arial, sans-serif" font-size="10" font-weight="400" fill="#888" letter-spacing="2">VILA</text>
+</svg>

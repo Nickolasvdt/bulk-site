@@ -18,7 +18,6 @@ const servicos = SERVICES.map((s) => ({
 
 const sobre = [
   { name: "Casos", desc: "O que já entregamos", href: "/#casos" },
-  { name: "Blog", desc: "Conteúdo para crescer", href: "/blog" },
   { name: "Orçamento", desc: "Proposta sob medida", href: "/orcamento" },
 ];
 

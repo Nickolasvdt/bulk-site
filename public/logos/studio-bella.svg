@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <circle cx="18" cy="24" r="14" fill="none" stroke="#b06090" stroke-width="2"/>
+  <circle cx="18" cy="24" r="6" fill="#b06090"/>
+  <text x="40" y="22" font-family="Georgia, serif" font-size="11" font-weight="400" fill="#888" letter-spacing="3">STUDIO</text>
+  <text x="40" y="36" font-family="Georgia, serif" font-size="15" font-weight="700" fill="#1a1a1a" letter-spacing="1">Bella</text>
+</svg>

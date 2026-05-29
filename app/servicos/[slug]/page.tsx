@@ -169,18 +169,20 @@ export default async function ServicePage(
         <div className="max-w-[1280px] mx-auto px-6 md:px-8">
           <Reveal>
             <div className="p-8 md:p-12 rounded-3xl bg-dark text-bg text-center">
-              <h2 className="txt-display text-3xl md:text-4xl mb-3">Vamos colocar isso para rodar?</h2>
+              <h2 className="txt-display text-3xl md:text-4xl mb-3">Pronto para dar o próximo passo?</h2>
               <p className="text-bg/70 mb-7 max-w-xl mx-auto">
-                Agende um diagnóstico gratuito e receba um orçamento sob medida para {s.name.toLowerCase()}.
+                Agende um diagnóstico gratuito e receba uma proposta sob medida para {s.name.toLowerCase()}.
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <ServiceCta slug={s.slug} />
-                <Link
-                  href="/orcamento"
+                <a
+                  href={whatsappLink(`Olá! Quero saber mais sobre ${s.name}.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="min-h-[52px] inline-flex items-center px-6 rounded-full border border-bg/25 text-bg font-semibold hover:bg-bg/10 transition"
                 >
-                  Solicitar orçamento
-                </Link>
+                  Falar no WhatsApp
+                </a>
               </div>
             </div>
           </Reveal>
