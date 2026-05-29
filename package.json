@@ -1,5 +1,5 @@
 {
-  "name": "bulk-studio",
+  "name": "bulk-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,6 +16,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "simple-icons": "^16.21.0",
+    "swiper": "^12.2.0",
     "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {

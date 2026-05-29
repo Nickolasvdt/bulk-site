@@ -13,23 +13,23 @@ html {
 }
 
 body {
-  background: #FBF8F2;
-  color: #0F0E0C;
+  background: #FFFFFF;
+  color: #050707;
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
 
 /* Selection */
 ::selection {
-  background: #FF5C28;
-  color: #FBF8F2;
+  background: #7a0000;
+  color: #FFFFFF;
 }
 
 /* Hairlines */
-.rule-t { border-top: 1px solid rgba(15, 14, 12, 0.08); }
-.rule-b { border-bottom: 1px solid rgba(15, 14, 12, 0.08); }
-.rule-l { border-left: 1px solid rgba(15, 14, 12, 0.08); }
-.rule-r { border-right: 1px solid rgba(15, 14, 12, 0.08); }
+.rule-t { border-top: 1px solid rgba(5, 7, 7, 0.08); }
+.rule-b { border-bottom: 1px solid rgba(5, 7, 7, 0.08); }
+.rule-l { border-left: 1px solid rgba(5, 7, 7, 0.08); }
+.rule-r { border-right: 1px solid rgba(5, 7, 7, 0.08); }
 
 @media (-webkit-min-device-pixel-ratio: 2) {
   .rule-t { border-top-width: 0.5px; }
@@ -56,6 +56,26 @@ body {
   font-weight: 600;
   line-height: 0.92;
   letter-spacing: -0.03em;
+}
+
+/* Swiper overrides — G4-style */
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+.swiper-pagination-bullet {
+  background: #7a0000;
+  opacity: 0.4;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 26px;
+  border-radius: 9999px;
+  transition: width 0.3s;
+}
+/* Smooth scroll para âncoras */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Reduced motion */
