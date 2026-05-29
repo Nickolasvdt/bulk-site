@@ -14,6 +14,7 @@ const config: Config = {
         accent: "#610000",  // brand deep red
         sun: "#420000",     // brand darkest red
         rule: "#05070714",  // ink at 8%
+        dark: "#050707",    // footer / dark sections
       },
       fontFamily: {
         display: ["var(--font-display)", "ui-serif", "Georgia"],
