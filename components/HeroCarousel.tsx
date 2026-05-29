@@ -1,37 +1,68 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
+import { useContactModal } from "@/components/contact/useContactModal";
 
-const slides = [
+type Slide = {
+  id: string;
+  label: string;
+  headline: string;
+  desc: string;
+  cta: string;
+  href?: string;
+  modal?: boolean;
+  image: string;
+};
+
+const slides: Slide[] = [
   {
     id: "bulk",
     label: "Agência Digital · São Paulo",
     headline: "Presença digital\nque vende\ntodo dia.",
-    desc: "Site profissional, IA no WhatsApp e Google Meu Negócio. Seu negócio encontrado, escolhido e faturando.",
+    desc: "Site, tráfego, social media, Google e IA no WhatsApp. Seu negócio encontrado, escolhido e faturando.",
     cta: "Agendar diagnóstico",
-    href: "#contato",
+    modal: true,
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "site",
-    label: "Site Profissional",
+    label: "Criação de Sites",
     headline: "No ar em\n7 dias,\ncompleto.",
     desc: "Design sob medida, mobile-first, velocidade máxima. Domínio e hospedagem inclusos.",
-    cta: "Saiba mais",
-    href: "#como-funciona",
+    cta: "Ver serviço",
+    href: "/servicos/criacao-de-sites",
     image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "trafego",
+    label: "Gestão de Tráfego",
+    headline: "Anúncios que\ntrazem o\ncliente certo.",
+    desc: "Campanhas no Google e Meta colocando seu negócio na frente de quem já quer comprar.",
+    cta: "Ver serviço",
+    href: "/servicos/gestao-de-trafego",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    id: "social",
+    label: "Social Media",
+    headline: "Presença que\nconstrói\nautoridade.",
+    desc: "Conteúdo estratégico e gestão de redes que mantêm seu negócio lembrado e confiável.",
+    cta: "Ver serviço",
+    href: "/servicos/social-media",
+    image: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200&q=80",
   },
   {
     id: "ia",
     label: "IA no WhatsApp",
-    headline: "Atendendo\ndominingo às\n23h.",
-    desc: "Agente que responde, qualifica e agenda pelo WhatsApp. Automático, sem parar.",
-    cta: "Saiba mais",
-    href: "#como-funciona",
+    headline: "Atendendo\ndomingo às\n23h.",
+    desc: "Agente que responde, qualifica e agenda pelo WhatsApp. Automático, 24 horas.",
+    cta: "Ver serviço",
+    href: "/servicos/ia-no-whatsapp",
     image: "https://images.unsplash.com/photo-1563986768817-257bf91c5753?auto=format&fit=crop&w=1200&q=80",
   },
   {
@@ -39,8 +70,8 @@ const slides = [
     label: "Google Meu Negócio",
     headline: "Apareça\nprimeiro\nperto de você.",
     desc: "Configurado e otimizado. Quando buscam seu serviço no bairro, você aparece primeiro.",
-    cta: "Saiba mais",
-    href: "#como-funciona",
+    cta: "Ver serviço",
+    href: "/servicos/google-meu-negocio",
     image: "https://plus.unsplash.com/premium_photo-1682088367648-735b1a6ac612?auto=format&fit=crop&w=1200&q=80",
   },
   {
@@ -48,27 +79,9 @@ const slides = [
     label: "Manutenção Mensal",
     headline: "Sempre\natualizado,\nsempre no ar.",
     desc: "Relatório mensal, suporte contínuo, atualizações. Nada quebrado, nada desatualizado.",
-    cta: "Ver planos",
-    href: "#planos",
+    cta: "Ver serviço",
+    href: "/servicos/manutencao",
     image: "https://plus.unsplash.com/premium_photo-1661766521984-e7469a450b6f?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "numeros",
-    label: "Negócios em São Paulo",
-    headline: "200+\nnegócios\nno digital.",
-    desc: "Barbearias, restaurantes, salões, lojas, clínicas. Todos aparecendo e faturando.",
-    cta: "Ver casos",
-    href: "#casos",
-    image: "https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    id: "bulk-pass",
-    label: "Bulk Pass",
-    headline: "O plano\ncompleto\npara crescer.",
-    desc: "Site + IA + Google + Manutenção. Tudo junto, com prioridade e desconto.",
-    cta: "Em breve",
-    href: "#planos",
-    image: "https://plus.unsplash.com/premium_photo-1661902210733-17533340166f?auto=format&fit=crop&w=1200&q=80",
   },
 ];
 
@@ -92,9 +105,14 @@ function ArrowButton({ dir, onClick }: { dir: "prev" | "next"; onClick: () => vo
 
 export function HeroCarousel() {
   const swiperRef = useRef<SwiperType | null>(null);
+  const { openContact } = useContactModal();
 
   return (
     <section className="relative bg-ink text-bg min-h-screen">
+      <h1 className="sr-only">
+        Bulk — Agência digital para negócio local em São Paulo: criação de sites, gestão de
+        tráfego, social media, Google Meu Negócio, IA no WhatsApp e manutenção.
+      </h1>
       <Swiper
         modules={[Autoplay, Navigation]}
         slidesPerView={1}
@@ -127,22 +145,36 @@ export function HeroCarousel() {
                     {slide.label}
                   </p>
                   <div className="w-8 h-px bg-bg/20 mb-6" />
-                  <h1 className="font-display font-semibold text-[clamp(38px,5.5vw,72px)] leading-[0.92] tracking-[-0.03em] whitespace-pre-line max-w-lg">
+                  <p className="font-display font-bold text-[clamp(38px,5.5vw,72px)] leading-[0.92] tracking-[-0.03em] whitespace-pre-line max-w-lg">
                     {slide.headline}
-                  </h1>
+                  </p>
                   <p className="mt-7 text-[15px] leading-[1.65] text-bg/50 max-w-[360px]">
                     {slide.desc}
                   </p>
                   <div className="mt-8 flex items-center gap-4 flex-wrap">
-                    <a
-                      href={slide.href}
-                      className="inline-flex items-center gap-2 bg-accent text-bg px-6 py-3 rounded-md text-[14px] font-medium hover:bg-sun transition-colors min-h-[44px]"
+                    {slide.modal ? (
+                      <button
+                        type="button"
+                        onClick={() => openContact()}
+                        className="inline-flex items-center gap-2 bg-accent text-bg px-6 py-3 rounded-md text-[14px] font-semibold hover:bg-sun transition-colors min-h-[44px]"
+                      >
+                        {slide.cta} →
+                      </button>
+                    ) : (
+                      <Link
+                        href={slide.href ?? "#servicos"}
+                        className="inline-flex items-center gap-2 bg-accent text-bg px-6 py-3 rounded-md text-[14px] font-semibold hover:bg-sun transition-colors min-h-[44px]"
+                      >
+                        {slide.cta} →
+                      </Link>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() => openContact()}
+                      className="text-[13px] text-bg/40 hover:text-accent transition-colors"
                     >
-                      {slide.cta} →
-                    </a>
-                    <a href="#como-funciona" className="text-[13px] text-bg/30 hover:text-accent transition-colors">
-                      Como funciona ↓
-                    </a>
+                      Agendar diagnóstico ↓
+                    </button>
                   </div>
                 </div>
               </div>

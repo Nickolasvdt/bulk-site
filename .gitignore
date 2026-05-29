@@ -9,3 +9,6 @@ build/
 .turbo
 
 .vercel
+
+# build artifact
+tsconfig.tsbuildinfo

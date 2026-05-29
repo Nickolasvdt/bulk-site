@@ -2,22 +2,24 @@
 
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "motion/react";
+import { SERVICES } from "@/lib/site-config";
+import { useContactModal } from "@/components/contact/useContactModal";
 
 type MenuId = "servicos" | "sobre" | null;
 
-const servicos = [
-  { name: "Site Profissional", desc: "No ar em 7 dias", href: "#como-funciona" },
-  { name: "IA no WhatsApp", desc: "Atendimento 24h/7d", href: "#como-funciona" },
-  { name: "Google Meu Negócio", desc: "Pág. 1 no local", href: "#como-funciona" },
-  { name: "Manutenção Mensal", desc: "Suporte contínuo", href: "#como-funciona" },
-];
+const servicos = SERVICES.map((s) => ({
+  name: s.name,
+  desc: s.short,
+  href: `/servicos/${s.slug}`,
+}));
 
 const sobre = [
-  { name: "A Bulk", desc: "Nossa história e missão", href: "#sobre" },
-  { name: "Casos de Sucesso", desc: "Resultados reais", href: "#casos" },
-  { name: "Blog", desc: "Conteúdo para crescer", href: "#blog" },
-  { name: "Contato", desc: "Fale conosco", href: "#contato" },
+  { name: "Casos", desc: "O que já entregamos", href: "/#casos" },
+  { name: "Blog", desc: "Conteúdo para crescer", href: "/blog" },
+  { name: "Orçamento", desc: "Proposta sob medida", href: "/orcamento" },
 ];
 
 function DropdownMenu({ items, onClose }: { items: typeof servicos; onClose: () => void }) {
@@ -51,6 +53,11 @@ export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<MenuId>(null);
   const headerRef = useRef<HTMLElement>(null);
+  const { openContact } = useContactModal();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+  // Fora da home não há hero escuro: o nav precisa ser sólido (texto escuro).
+  const solid = scrolled || !isHome;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -84,7 +91,7 @@ export function Nav() {
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="leading-none shrink-0" aria-label="Bulk — página inicial">
+        <Link href="/" className="leading-none shrink-0" aria-label="Bulk — página inicial">
           <Image
             src="/logo.png"
             alt="Bulk"
@@ -92,10 +99,10 @@ export function Nav() {
             height={48}
             priority
             className={`h-10 w-auto object-contain transition-all duration-300 ${
-              scrolled ? "brightness-0" : "brightness-100"
+              solid ? "brightness-0" : "brightness-100"
             }`}
           />
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-1" aria-label="Menu principal">
@@ -109,7 +116,7 @@ export function Nav() {
               aria-expanded={activeMenu === "servicos"}
               aria-haspopup="true"
               className={`flex items-center gap-1 px-4 py-2 min-h-[44px] rounded-md text-[14px] transition-colors ${
-                scrolled ? "text-ink/70 hover:text-ink" : "text-bg/70 hover:text-bg"
+                solid ?"text-ink/70 hover:text-ink" : "text-bg/70 hover:text-bg"
               }`}
             >
               Serviços
@@ -125,15 +132,14 @@ export function Nav() {
           </div>
 
           {[
-            { label: "Casos", href: "#casos" },
-            { label: "Planos", href: "#planos" },
-            { label: "Blog", href: "#blog" },
+            { label: "Casos", href: "/#casos" },
+            { label: "Blog", href: "/blog" },
           ].map((link) => (
             <a
               key={link.href}
               href={link.href}
               className={`px-4 py-2 min-h-[44px] inline-flex items-center text-[14px] transition-colors ${
-                scrolled ? "text-ink/60 hover:text-ink" : "text-bg/60 hover:text-bg"
+                solid ?"text-ink/60 hover:text-ink" : "text-bg/60 hover:text-bg"
               }`}
             >
               {link.label}
@@ -150,7 +156,7 @@ export function Nav() {
               aria-expanded={activeMenu === "sobre"}
               aria-haspopup="true"
               className={`flex items-center gap-1 px-4 py-2 min-h-[44px] rounded-md text-[14px] transition-colors ${
-                scrolled ? "text-ink/60 hover:text-ink" : "text-bg/60 hover:text-bg"
+                solid ?"text-ink/60 hover:text-ink" : "text-bg/60 hover:text-bg"
               }`}
             >
               Sobre nós
@@ -168,26 +174,17 @@ export function Nav() {
 
         {/* CTAs */}
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href="#contato"
-            className={`text-[14px] font-medium px-4 py-2 min-h-[44px] inline-flex items-center rounded-md transition-colors ${
-              scrolled
-                ? "text-ink/60 hover:text-ink"
-                : "text-bg/60 hover:text-bg"
-            }`}
-          >
-            Área do cliente
-          </a>
-          <a
-            href="#contato"
-            className={`inline-flex items-center gap-1.5 px-5 py-2.5 min-h-[44px] rounded-md text-[14px] font-medium transition-colors ${
+          <button
+            type="button"
+            onClick={() => openContact()}
+            className={`inline-flex items-center gap-1.5 px-5 py-2.5 min-h-[44px] rounded-md text-[14px] font-semibold transition-colors ${
               scrolled
                 ? "bg-accent text-bg hover:bg-sun"
                 : "bg-bg text-ink hover:bg-bg/90"
             }`}
           >
             Agendar diagnóstico
-          </a>
+          </button>
         </div>
 
         {/* Mobile hamburger */}
@@ -204,7 +201,7 @@ export function Nav() {
                 mobileOpen
                   ? i === 0 ? "rotate-45 translate-y-[7px]" : "-rotate-45 -translate-y-[7px]"
                   : ""
-              } ${scrolled ? "bg-ink" : "bg-bg"}`}
+              } ${solid ?"bg-ink" : "bg-bg"}`}
             />
           ))}
         </button>
@@ -221,11 +218,10 @@ export function Nav() {
           >
             <div className="max-w-6xl mx-auto px-6">
               {[
-                { label: "Serviços", href: "#como-funciona" },
-                { label: "Casos", href: "#casos" },
-                { label: "Planos", href: "#planos" },
-                { label: "Blog", href: "#blog" },
-                { label: "Sobre nós", href: "#sobre" },
+                { label: "Serviços", href: "/#servicos" },
+                { label: "Casos", href: "/#casos" },
+                { label: "Blog", href: "/blog" },
+                { label: "Orçamento", href: "/orcamento" },
               ].map((link) => (
                 <a
                   key={link.href}
@@ -238,13 +234,16 @@ export function Nav() {
                 </a>
               ))}
               <div className="py-5">
-                <a
-                  href="#contato"
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center justify-center bg-accent text-bg rounded-md py-3.5 text-[14px] font-medium min-h-[48px]"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileOpen(false);
+                    openContact();
+                  }}
+                  className="w-full flex items-center justify-center bg-accent text-bg rounded-md py-3.5 text-[14px] font-semibold min-h-[48px]"
                 >
                   Agendar diagnóstico →
-                </a>
+                </button>
               </div>
             </div>
           </motion.div>

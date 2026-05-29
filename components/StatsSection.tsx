@@ -27,7 +27,7 @@ function StatCounter({
 
   return (
     <div ref={ref} className="flex flex-col items-center gap-2 py-12 px-8">
-      <div className="font-display font-semibold text-[clamp(48px,7vw,80px)] leading-none tracking-[-0.04em] text-bg">
+      <div className="font-display font-bold text-[clamp(48px,7vw,80px)] leading-none tracking-[-0.04em] text-bg">
         {display}{suffix}
       </div>
       <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-bg/50">{label}</p>
@@ -40,9 +40,9 @@ export function StatsSection() {
     <section className="bg-accent">
       <div className="max-w-[1280px] mx-auto px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-bg/20">
-          <StatCounter value={200} suffix="+" label="Negócios atendidos em SP" />
-          <StatCounter value={7}   suffix=" dias" label="Prazo de entrega do site" />
-          <StatCounter value={24}  suffix="h" label="Atendimento via IA" />
+          <StatCounter value={7}  suffix=" dias" label="Para o site no ar" />
+          <StatCounter value={24} suffix="h" label="Atendimento com IA" />
+          <StatCounter value={6}  suffix="" label="Serviços para crescer" />
         </div>
       </div>
     </section>
