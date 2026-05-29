@@ -1,12 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import { whatsappLink } from "@/lib/site-config";
 
 export function WhatsAppFloat() {
-  const pathname = usePathname();
   const [showBubble, setShowBubble] = useState(false);
 
   // Mostra o balão de conversão após um instante para chamar atenção.
@@ -14,9 +12,6 @@ export function WhatsAppFloat() {
     const t = setTimeout(() => setShowBubble(true), 2500);
     return () => clearTimeout(t);
   }, []);
-
-  // No blog não exibimos o botão flutuante (leitura sem distração).
-  if (pathname.startsWith("/blog")) return null;
 
   return (
     <div className="fixed right-5 bottom-28 md:bottom-20 z-[60] flex flex-col items-end gap-3">
