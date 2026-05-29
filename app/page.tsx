@@ -17,7 +17,6 @@ import { MobileBottomNav }          from "@/components/ui/MobileBottomNav";
 export default function Home() {
   return (
     <main>
-      <AnnouncementBar />
       <Nav />
       <HeroCarousel />
       <ServicesGrid />
@@ -30,6 +29,7 @@ export default function Home() {
       <BlogSection />
       <FaqSection />
       <Footer />
+      <AnnouncementBar />
       <WhatsAppFloat />
       <MobileBottomNav />
     </main>
