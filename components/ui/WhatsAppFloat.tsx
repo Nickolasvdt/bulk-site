@@ -1,6 +1,13 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { whatsappLink } from "@/lib/site-config";
 
 export function WhatsAppFloat() {
+  const pathname = usePathname();
+  // No blog não exibimos o botão flutuante (leitura sem distração).
+  if (pathname.startsWith("/blog")) return null;
+
   return (
     <a
       href={whatsappLink()}

@@ -7,44 +7,60 @@ import { faqSchema } from "@/lib/seo/schema";
 
 const faqs = [
   {
-    q: "O que é a Bulk?",
-    a: "A Bulk é uma agência digital focada em negócios locais em São Paulo. Cuidamos da presença digital completa: criação de sites, gestão de tráfego, social media, Google Meu Negócio, IA no WhatsApp e manutenção — para o seu negócio ser encontrado, escolhido e vender todo dia.",
+    q: "Como eu começo? Qual o primeiro passo?",
+    a: "É simples e sem compromisso: você agenda um diagnóstico gratuito (pelo botão 'Agendar diagnóstico' ou pelo WhatsApp). A gente entende o seu negócio, mostra onde estão as oportunidades e monta uma proposta sob medida. Você só decide seguir se fizer sentido.",
   },
   {
-    q: "Quanto tempo leva para o site ficar no ar?",
-    a: "Nosso prazo padrão é 7 dias corridos após aprovação do briefing e pagamento. Entregamos design sob medida, mobile-first, com domínio e hospedagem inclusos e já otimizado para o Google.",
+    q: "Quanto custa? Qual o investimento?",
+    a: "Não trabalhamos com pacotes engessados — cada negócio é único, então o valor depende do que você precisa. No diagnóstico gratuito montamos uma proposta sob medida, transparente, com o escopo e o investimento certos para o seu momento. Sem surpresa e sem pagar pelo que não vai usar.",
+  },
+  {
+    q: "Quais formas de pagamento vocês aceitam?",
+    a: "Trabalhamos com as formas mais comuns (Pix, cartão e boleto), e os detalhes ficam definidos na proposta. Serviços contínuos, como manutenção e gestão de tráfego, são mensais; projetos pontuais, como um site, têm condições próprias.",
+  },
+  {
+    q: "Quanto tempo leva para o meu site ficar no ar?",
+    a: "O prazo padrão é de 7 dias corridos após a aprovação do briefing e o envio do conteúdo. Entregamos um site sob medida, mobile-first, com domínio e hospedagem inclusos e já otimizado para o Google.",
+  },
+  {
+    q: "Preciso entender de tecnologia para trabalhar com vocês?",
+    a: "Não. A gente cuida da parte técnica de ponta a ponta — site, domínio, hospedagem, Google, automações. Você foca no seu negócio e fala com a gente em português, sem jargão. Quando precisar mudar algo, é só pedir no WhatsApp.",
+  },
+  {
+    q: "O site é meu? Fico com o domínio?",
+    a: "Sim. O domínio e o site são do seu negócio. A gente configura e cuida de tudo para você, mas a propriedade é sua — sem amarras.",
+  },
+  {
+    q: "Existe fidelidade ou contrato longo?",
+    a: "Serviços pontuais, como a criação do site, não têm fidelidade. Serviços contínuos (manutenção, tráfego, social media) são mensais e você pode ajustar conforme o resultado. A ideia é continuar pela entrega, não por amarra contratual.",
   },
   {
     q: "A IA no WhatsApp substitui meu atendente humano?",
-    a: "Não substitui — ela complementa. A IA cuida do primeiro contato: responde perguntas frequentes, qualifica o interesse do cliente e agenda. Para atendimentos mais complexos, ela transfere para você ou seu time. Domingo às 23h, quando ninguém está disponível, ela atende.",
+    a: "Não substitui — complementa. A IA cuida do primeiro contato: responde dúvidas frequentes, qualifica o cliente e agenda. O que exige toque humano, ela passa para você ou seu time. E no domingo às 23h, quando ninguém está disponível, ela continua atendendo e captando cliente.",
   },
   {
-    q: "O Google Meu Negócio funciona para qualquer tipo de negócio?",
-    a: "Funciona para qualquer negócio com endereço físico ou que atenda clientes em uma área geográfica definida. Barbearias, restaurantes, salões, clínicas, lojas, academias, oficinas — todos se beneficiam diretamente.",
+    q: "O Google Meu Negócio funciona para o meu tipo de negócio?",
+    a: "Funciona para praticamente qualquer negócio com endereço físico ou que atenda uma região definida — barbearias, restaurantes, salões, clínicas, lojas, academias, oficinas e prestadores de serviço. É um dos jeitos mais rápidos de ser encontrado por quem já procura você na vizinhança.",
   },
   {
     q: "Quais tipos de negócio a Bulk atende?",
-    a: "Atendemos principalmente negócios locais em São Paulo: barbearias, salões de beleza, restaurantes e cafeterias, lojas físicas, clínicas e consultórios, academias, oficinas mecânicas e prestadores de serviços em geral.",
+    a: "Negócios locais em geral: beleza, alimentação, varejo, saúde, fitness, automotivo e serviços. Se o seu cliente procura você na internet ou no Google, a gente ajuda você a aparecer e converter.",
   },
   {
-    q: "Como funciona a manutenção mensal?",
-    a: "A manutenção mensal inclui atualizações de segurança, relatório de desempenho, pequenas alterações de conteúdo e suporte prioritário. É um serviço contínuo opcional para o seu site nunca ficar desatualizado ou quebrado.",
+    q: "Como funciona a manutenção e o suporte?",
+    a: "A manutenção mensal mantém seu site seguro, atualizado e no ar, com relatório e pequenas alterações inclusas. O suporte é por WhatsApp e e-mail, com prioridade para clientes ativos — emergências, como site fora do ar, têm atendimento rápido.",
   },
   {
-    q: "Como funciona o suporte?",
-    a: "Atendemos por WhatsApp e e-mail. Para clientes com contrato ativo, o suporte é prioritário com resposta em até 2 horas úteis. Emergências, como site fora do ar, têm resposta em até 1 hora.",
-  },
-  {
-    q: "Como funciona o orçamento?",
-    a: "Cada negócio é único, então não trabalhamos com pacotes engessados. Você fala com a gente, fazemos um diagnóstico gratuito e montamos uma proposta sob medida para o que o seu negócio precisa — só os serviços que fazem sentido para você.",
+    q: "E se eu não souber de qual serviço preciso?",
+    a: "Tudo bem — a maioria dos clientes começa assim. No diagnóstico gratuito a gente analisa seu cenário e recomenda só o que vai trazer resultado, na ordem certa. Sem empurrar serviço que você não precisa.",
   },
   {
     q: "Vocês atendem negócios fora de São Paulo?",
-    a: "Principalmente atendemos negócios em São Paulo e Grande SP. Para cidades do interior de SP e outros estados, avaliamos caso a caso. O contato inicial é gratuito — agende um diagnóstico.",
+    a: "Nosso foco é São Paulo e a Grande SP, mas grande parte do que fazemos (site, tráfego, social media, IA) é 100% remoto e atende qualquer região. Para fora de SP, avaliamos caso a caso — o diagnóstico é gratuito.",
   },
   {
-    q: "Como entrar em contato com a Bulk?",
-    a: "Você pode falar conosco pelo botão de WhatsApp no canto da tela, pelo formulário de contato aqui no site, ou pelo e-mail contato@bulkstudio.com.br. Respondemos em até 4 horas em dias úteis.",
+    q: "Como falo com a Bulk agora?",
+    a: "Clique em 'Agendar diagnóstico' aqui no site, fale no botão de WhatsApp no canto da tela ou escreva para contato@bulkstudio.com.br. Respondemos rápido em dias úteis.",
   },
 ];
 

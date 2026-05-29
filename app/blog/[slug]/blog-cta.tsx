@@ -16,3 +16,19 @@ export function BlogCta() {
     </div>
   );
 }
+
+export function SidebarCta() {
+  const { openContact } = useContactModal();
+  return (
+    <div className="p-6 rounded-2xl bg-dark text-bg">
+      <p className="txt-display text-lg mb-2">Pronto para crescer?</p>
+      <p className="text-bg/70 text-sm mb-4">Diagnóstico gratuito, sem compromisso.</p>
+      <button
+        onClick={() => openContact()}
+        className="w-full min-h-[48px] rounded-full bg-accent text-bg font-semibold hover:bg-sun transition"
+      >
+        Agendar diagnóstico
+      </button>
+    </div>
+  );
+}

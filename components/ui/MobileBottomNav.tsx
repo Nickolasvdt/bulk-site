@@ -13,14 +13,14 @@ const drawerContent: Record<NonNullable<Drawer>, { title: string; subtitle?: str
     href: `/servicos/${s.slug}`,
   })),
   casos: [
-    { title: "O que já entregamos", href: "#casos" },
-    { title: "Projeto de referência", subtitle: "Trigueiro Tech", href: "#casos" },
+    { title: "Resultados", subtitle: "O que já entregamos", href: "/#casos" },
+    { title: "Marketing digital", subtitle: "Como funciona o sistema", href: "/#marketing" },
   ],
   mais: [
-    { title: "Sobre a Bulk", href: "#sobre" },
     { title: "Blog", href: "/blog" },
     { title: "Solicitar orçamento", href: "/orcamento" },
-    { title: "Contato", href: "#contato" },
+    { title: "Termos de Uso", href: "/termos-de-uso" },
+    { title: "Política de Privacidade", href: "/privacidade" },
   ],
 };
 

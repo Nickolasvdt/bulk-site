@@ -5,6 +5,11 @@ import { SITE } from "@/lib/site-config";
 import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema, websiteSchema, siteNavigationSchema } from "@/lib/seo/schema";
+import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
+import { AnnouncementBar } from "@/components/AnnouncementBar";
+import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
+import { MobileBottomNav } from "@/components/ui/MobileBottomNav";
 
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -58,7 +63,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={organizationSchema} />
         <JsonLd data={websiteSchema} />
         <JsonLd data={siteNavigationSchema} />
-        <ContactModalProvider>{children}</ContactModalProvider>
+        <ContactModalProvider>
+          <Nav />
+          {children}
+          <Footer />
+          <AnnouncementBar />
+          <WhatsAppFloat />
+          <MobileBottomNav />
+        </ContactModalProvider>
       </body>
     </html>
   );
