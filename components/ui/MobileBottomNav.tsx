@@ -73,7 +73,7 @@ export function MobileBottomNav() {
 
       {/* Bottom bar */}
       <nav className="fixed bottom-0 left-0 right-0 h-[70px] bg-bg border-t border-rule z-[99999] md:hidden flex">
-        {(["servicos", "casos", "planos", "mais"] as Drawer[]).map((id) => {
+        {(["servicos", "casos", "planos", "mais"] as NonNullable<Drawer>[]).map((id) => {
           const labels: Record<NonNullable<Drawer>, string> = {
             servicos: "Serviços",
             casos: "Casos",
