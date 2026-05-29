@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "motion/react";
+import Image from "next/image";
 
 function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   const [val, setVal] = useState(0);
@@ -42,10 +43,14 @@ export function MissionSection() {
       <div className="absolute inset-0 bg-ink/80" />
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-8 flex flex-col items-center text-center">
-        {/* Bulk brand icon */}
-        <div className="w-12 h-12 rounded-full border-2 border-accent flex items-center justify-center mb-8">
-          <span className="font-display font-bold text-accent text-[18px]">B</span>
-        </div>
+        {/* Logo */}
+        <Image
+          src="/logo.png"
+          alt="Bulk"
+          width={160}
+          height={64}
+          className="h-14 w-auto object-contain brightness-0 invert mb-8"
+        />
 
         <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-bg/40 mb-6">
           Nossa missão
@@ -67,12 +72,6 @@ export function MissionSection() {
           </p>
         </div>
 
-        <a
-          href="#casos"
-          className="mt-10 inline-flex items-center gap-2 bg-accent text-bg px-6 py-3 rounded-md text-[13px] font-medium hover:bg-sun transition-colors"
-        >
-          Ver os casos →
-        </a>
       </div>
     </section>
   );

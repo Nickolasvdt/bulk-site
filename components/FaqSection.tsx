@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     q: "Como entrar em contato com a Bulk?",
-    a: "Você pode falar conosco pelo botão de WhatsApp no canto da tela, pelo formulário de contato aqui no site, ou pelo e-mail contato@bulk.digital. Respondemos em até 4 horas em dias úteis.",
+    a: "Você pode falar conosco pelo botão de WhatsApp no canto da tela, pelo formulário de contato aqui no site, ou pelo e-mail contato@bulkstudio.com.br. Respondemos em até 4 horas em dias úteis.",
   },
 ];
 
@@ -53,19 +53,14 @@ export function FaqSection() {
     <section className="bg-bg py-16 md:py-24">
       <div className="max-w-[1280px] mx-auto px-6 md:px-8">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
-          <div>
-            <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-mute mb-3">
-              Dúvidas frequentes
-            </p>
-            <h2 className="font-display font-semibold text-[clamp(24px,3.2vw,40px)] leading-[1.05] tracking-[-0.025em]">
-              Dúvidas mais{" "}
-              <span className="font-display italic text-accent">frequentes.</span>
-            </h2>
-          </div>
-          <p className="text-[13px] text-mute max-w-xs">
-            Respostas para as principais perguntas sobre nossos serviços.
+        <div className="mb-12">
+          <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-mute mb-3">
+            Dúvidas frequentes
           </p>
+          <h2 className="font-display font-semibold text-[clamp(24px,3.2vw,40px)] leading-[1.05] tracking-[-0.025em]">
+            Dúvidas mais{" "}
+            <span className="font-display italic text-accent">frequentes.</span>
+          </h2>
         </div>
 
         {/* Accordion */}

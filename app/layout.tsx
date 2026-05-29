@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -9,7 +9,7 @@ const display = Bricolage_Grotesque({
   display: "swap",
 });
 
-const sans = Geist({
+const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["400", "500", "600"],

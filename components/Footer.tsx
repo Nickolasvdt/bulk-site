@@ -6,37 +6,16 @@ const footerLinks = {
     { label: "IA no WhatsApp", href: "#como-funciona" },
     { label: "Google Meu Negócio", href: "#como-funciona" },
     { label: "Manutenção Mensal", href: "#planos" },
-    { label: "Ver todos", href: "#como-funciona" },
   ],
-  "Casos": [
-    { label: "Barbearias", href: "#casos" },
-    { label: "Restaurantes", href: "#casos" },
-    { label: "Salões de Beleza", href: "#casos" },
-    { label: "Lojas", href: "#casos" },
-    { label: "Todos os casos", href: "#casos" },
-  ],
-  "Planos": [
-    { label: "Site Básico", href: "#planos" },
-    { label: "Plano Completo", href: "#planos" },
-    { label: "Bulk Pass", href: "#planos" },
-    { label: "Agendar diagnóstico", href: "#contato" },
-  ],
-  "Conteúdo": [
-    { label: "Blog", href: "#blog" },
-    { label: "Instagram", href: "#" },
-    { label: "YouTube", href: "#" },
-    { label: "WhatsApp", href: "#" },
-  ],
-  "Sobre": [
+  "Empresa": [
     { label: "A Bulk", href: "#sobre" },
-    { label: "Nossa equipe", href: "#sobre" },
+    { label: "Blog", href: "#blog" },
     { label: "Contato", href: "#contato" },
-    { label: "Carreiras", href: "#" },
+    { label: "Agendar diagnóstico", href: "#contato" },
   ],
   "Legal": [
     { label: "Termos de Uso", href: "#" },
     { label: "Política de Privacidade", href: "#" },
-    { label: "Central de Ajuda", href: "#" },
   ],
 };
 
@@ -45,19 +24,16 @@ export function Footer() {
     <footer className="bg-ink text-bg">
       <div className="max-w-[1280px] mx-auto px-6 md:px-8 py-16">
         {/* Logo + links grid */}
-        <div className="grid grid-cols-2 md:grid-cols-7 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Logo col */}
-          <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
+          <div className="col-span-2 md:col-span-1 flex flex-col">
             <Image
               src="/logo.png"
               alt="Bulk"
-              width={80}
-              height={32}
-              className="h-8 w-auto brightness-100"
+              width={200}
+              height={80}
+              className="h-16 w-auto object-contain brightness-0 invert"
             />
-            <p className="text-[12px] text-bg/35 leading-[1.6]">
-              Presença digital para negócio local crescer.
-            </p>
           </div>
 
           {/* Link columns */}
@@ -89,7 +65,7 @@ export function Footer() {
               Bulk Digital LTDA. Todos os direitos reservados.
             </p>
             <p className="text-[11px] text-bg/20">
-              São Paulo – SP · contato@bulk.digital
+              São Paulo – SP · contato@bulkstudio.com.br
             </p>
           </div>
 

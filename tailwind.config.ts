@@ -11,7 +11,7 @@ const config: Config = {
         bg: "#FFFFFF",      // white
         ink: "#050707",     // brand near-black
         mute: "#6B6B6B",    // neutral grey
-        accent: "#610000",  // brand deep red
+        accent: "#7a0000",  // brand deep red
         sun: "#420000",     // brand darkest red
         rule: "#05070714",  // ink at 8%
         dark: "#050707",    // footer / dark sections

@@ -110,16 +110,14 @@ export function TestimonialsCarousel() {
                         className="object-cover"
                         sizes="420px"
                       />
-                      {isActive && (
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-16 h-16 rounded-full bg-ink/40 backdrop-blur-sm flex items-center justify-center">
-                            <div className="w-0 h-0 border-l-[20px] border-l-bg border-y-[12px] border-y-transparent ml-1.5" />
-                          </div>
-                        </div>
-                      )}
                     </div>
                     {/* Info */}
-                    <div className="p-4 text-center">
+                    <div className="p-5">
+                      {isActive && (
+                        <p className="text-[14px] text-mute leading-[1.6] mb-4">
+                          &ldquo;{t.quote}&rdquo;
+                        </p>
+                      )}
                       <p className="font-semibold text-[15px] text-ink">{t.name}</p>
                       <p className="text-[12px] text-mute mt-0.5">{t.role}</p>
                     </div>

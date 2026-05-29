@@ -37,7 +37,7 @@ const categories = ["Em alta", "Dicas", "IA", "Cases", "Site", "Google", "WhatsA
 
 export function BlogSection() {
   return (
-    <section id="blog" className="bg-bg py-16 md:py-24">
+    <section id="blog" className="bg-bg pt-16 md:pt-24 pb-10 md:pb-14">
       <div className="max-w-[1280px] mx-auto px-6 md:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
@@ -107,19 +107,6 @@ export function BlogSection() {
           </a>
         </div>
 
-        {/* Social links */}
-        <div className="mt-10 flex items-center justify-center gap-6 flex-wrap">
-          <p className="text-[12px] text-mute font-mono uppercase tracking-wide">Também em:</p>
-          {[
-            { name: "Instagram", href: "#" },
-            { name: "YouTube", href: "#" },
-            { name: "WhatsApp", href: "#" },
-          ].map((s) => (
-            <a key={s.name} href={s.href} className="text-[13px] text-mute hover:text-accent transition-colors font-medium">
-              {s.name}
-            </a>
-          ))}
-        </div>
       </div>
     </section>
   );

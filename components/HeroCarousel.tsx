@@ -105,35 +105,10 @@ export function HeroCarousel() {
       >
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <div className="relative flex h-full">
-              {/* Left — text */}
-              <div className="relative z-10 flex flex-col justify-center w-full lg:w-[52%] px-8 md:px-16 lg:px-20 pt-24 pb-16">
-                <p className="text-[11px] font-mono tracking-[0.22em] uppercase text-bg/35 mb-6">
-                  {slide.label}
-                </p>
-                <div className="w-8 h-px bg-bg/20 mb-6" />
-                <h1 className="font-display font-semibold text-[clamp(38px,5.5vw,72px)] leading-[0.92] tracking-[-0.03em] whitespace-pre-line max-w-lg">
-                  {slide.headline}
-                </h1>
-                <p className="mt-7 text-[14px] leading-[1.65] text-bg/50 max-w-[320px]">
-                  {slide.desc}
-                </p>
-                <div className="mt-8 flex items-center gap-4 flex-wrap">
-                  <a
-                    href={slide.href}
-                    className="inline-flex items-center gap-2 bg-accent text-bg px-6 py-3 rounded-md text-[13px] font-medium hover:bg-sun transition-colors"
-                  >
-                    {slide.cta} →
-                  </a>
-                  <a href="#como-funciona" className="text-[12px] text-bg/30 hover:text-accent transition-colors">
-                    Como funciona ↓
-                  </a>
-                </div>
-              </div>
-
-              {/* Right — background image */}
+            <div className="relative h-full">
+              {/* Right — background image (behind content) */}
               <div
-                className="hidden lg:block absolute right-0 top-0 w-[52%] h-full bg-cover bg-center"
+                className="hidden lg:block absolute right-0 top-0 w-[50%] h-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${slide.image})` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/60 to-transparent" />
@@ -144,15 +119,44 @@ export function HeroCarousel() {
                 className="lg:hidden absolute inset-0 bg-cover bg-center opacity-20"
                 style={{ backgroundImage: `url(${slide.image})` }}
               />
+
+              {/* Content — centrado com max 85% da largura */}
+              <div className="relative z-10 h-full max-w-[1280px] mx-auto px-6 md:px-8 flex items-center">
+                <div className="w-full lg:w-[50%] pt-24 pb-16 flex flex-col justify-center">
+                  <p className="text-[12px] font-mono tracking-[0.22em] uppercase text-bg/35 mb-6">
+                    {slide.label}
+                  </p>
+                  <div className="w-8 h-px bg-bg/20 mb-6" />
+                  <h1 className="font-display font-semibold text-[clamp(38px,5.5vw,72px)] leading-[0.92] tracking-[-0.03em] whitespace-pre-line max-w-lg">
+                    {slide.headline}
+                  </h1>
+                  <p className="mt-7 text-[15px] leading-[1.65] text-bg/50 max-w-[360px]">
+                    {slide.desc}
+                  </p>
+                  <div className="mt-8 flex items-center gap-4 flex-wrap">
+                    <a
+                      href={slide.href}
+                      className="inline-flex items-center gap-2 bg-accent text-bg px-6 py-3 rounded-md text-[14px] font-medium hover:bg-sun transition-colors min-h-[44px]"
+                    >
+                      {slide.cta} →
+                    </a>
+                    <a href="#como-funciona" className="text-[13px] text-bg/30 hover:text-accent transition-colors">
+                      Como funciona ↓
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      {/* Navigation arrows */}
-      <div className="absolute bottom-8 left-8 md:left-16 lg:left-20 z-20 flex items-center gap-2">
-        <ArrowButton dir="prev" onClick={() => swiperRef.current?.slidePrev()} />
-        <ArrowButton dir="next" onClick={() => swiperRef.current?.slideNext()} />
+      {/* Navigation arrows — alinhadas ao container */}
+      <div className="absolute bottom-12 left-0 right-0 z-20">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-8 flex items-center gap-2">
+          <ArrowButton dir="prev" onClick={() => swiperRef.current?.slidePrev()} />
+          <ArrowButton dir="next" onClick={() => swiperRef.current?.slideNext()} />
+        </div>
       </div>
     </section>
   );

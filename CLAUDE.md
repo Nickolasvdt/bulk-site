@@ -204,3 +204,50 @@ feat: seção X — NomeSeção (G4-style Bulk)
 ## Referência visual
 HTML completo do g4business.com analisado em 2026-05-28.
 Mapeamento completo na conversa da sessão de design (brainstorming).
+
+---
+
+## Correções aplicadas (2026-05-29)
+
+### Identidade Visual
+- Cor accent atualizada: `#610000` → `#7a0000` (tailwind.config.ts, globals.css)
+- Fonte padrão (sans) trocada de Geist para **Inter** (layout.tsx)
+- Email corporativo: `contato@bulkstudio.com.br`
+
+### Header / Nav
+- Logo ampliada: `h-8` → `h-10`, `width=80` → `width=120`
+- Textos dos links: `text-[13px]` → `text-[14px]` para acessibilidade
+- Botão CTA: `text-[12px]` → `text-[14px]`, `min-h-[44px]` adicionado
+- Área clicável mobile hamburger: `w-8 h-8` → `w-11 h-11`
+- Adicionados: `role="banner"`, `aria-label`, `aria-expanded`, `aria-haspopup`
+
+### AnnouncementBar ("Novo: IA no WhatsApp")
+- Movida de topo para **sticky bottom** (`fixed bottom-0 z-40`)
+- Posição no page.tsx: após `<Footer />`, antes de `<WhatsAppFloat />`
+- Padding bottom mobile (`pb-20`) para não sobrepor MobileBottomNav
+
+### Hero Carousel
+- Layout refeito: container `max-w-[1280px] mx-auto px-6 md:px-8` — respeita regra de 85%
+- Setas de navegação alinhadas ao mesmo container do conteúdo
+- Botão CTA: `text-[13px]` → `text-[14px]`, `min-h-[44px]`
+
+### Testimonials ("O que dizem")
+- Removido overlay do botão play (era placeholder de vídeo)
+- Adicionado texto do depoimento (quote) abaixo da imagem no card ativo
+
+### Missão ("Nossa missão")
+- Removido CTA "Ver os casos →"
+- Mantidas apenas as informações: ícone, eyebrow, título, parágrafo, counter 200+
+
+### Conteúdo / Blog
+- Removida seção "Também em: Instagram, YouTube, WhatsApp"
+
+### FAQ ("Dúvidas frequentes")
+- Removido texto lateral "Respostas para as principais perguntas sobre nossos serviços."
+- Header simplificado: apenas eyebrow + título h2
+- Email atualizado para contato@bulkstudio.com.br no último FAQ
+
+### Footer
+- Logo corrigida: `object-contain brightness-0 invert` para não distorcer e aparece branca
+- Slogan atualizado: "Presença digital que vende todo dia." (igual ao banner)
+- Email: `contato@bulkstudio.com.br`

@@ -21,7 +21,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: #610000;
+  background: #7a0000;
   color: #FFFFFF;
 }
 
@@ -64,7 +64,7 @@ body {
   display: none !important;
 }
 .swiper-pagination-bullet {
-  background: #610000;
+  background: #7a0000;
   opacity: 0.4;
 }
 .swiper-pagination-bullet-active {
