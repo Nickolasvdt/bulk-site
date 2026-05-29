@@ -1,5 +1,6 @@
 "use client";
 import { Reveal } from "@/components/ui/Reveal";
+import { LogosMarquee } from "@/components/ui/LogosMarquee";
 
 const ACHIEVEMENTS = [
   { label: "Dezenas de sites criados", sub: "negócios locais no ar e vendendo" },
@@ -35,23 +36,8 @@ export function CasesSection() {
         </div>
 
         <Reveal>
-          <a
-            href="https://trigueirotech.com.br/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group flex flex-col md:flex-row items-start md:items-center justify-between gap-5 p-8 rounded-2xl bg-dark text-bg"
-          >
-            <div>
-              <p className="txt-eyebrow text-bg/60 mb-2">Projeto de referência</p>
-              <p className="txt-display text-2xl md:text-3xl">Trigueiro Tech</p>
-              <p className="text-bg/70 mt-1">
-                Site profissional no ar — um exemplo do nosso padrão de entrega.
-              </p>
-            </div>
-            <span className="shrink-0 min-h-[48px] inline-flex items-center px-6 rounded-full bg-accent text-bg font-semibold group-hover:bg-sun transition">
-              Ver site →
-            </span>
-          </a>
+          <p className="txt-eyebrow text-mute text-center mb-8">Marcas com quem já trabalhamos</p>
+          <LogosMarquee />
         </Reveal>
       </div>
     </section>
