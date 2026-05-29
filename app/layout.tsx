@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE } from "@/lib/site-config";
+import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { organizationSchema, websiteSchema, siteNavigationSchema } from "@/lib/seo/schema";
 
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 });
 
 const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -24,20 +28,38 @@ const mono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bulk — Presença digital para negócio local crescer",
-  description: "Site profissional, IA no WhatsApp e Google Meu Negócio. Sua empresa encontrada, escolhida e faturando todo dia.",
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: "Bulk — Presença digital para negócio local crescer",
+    template: "%s | Bulk",
+  },
+  description: SITE.description,
+  alternates: { canonical: "/" },
   openGraph: {
     title: "Bulk — Presença digital para negócio local crescer",
-    description: "Site profissional, IA no WhatsApp e Google Meu Negócio. Sua empresa encontrada todo dia.",
+    description: SITE.description,
     type: "website",
     locale: "pt_BR",
+    url: SITE.url,
+    siteName: SITE.name,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Bulk — Presença digital para negócio local crescer",
+    description: SITE.description,
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
-      <body>{children}</body>
+      <body>
+        <JsonLd data={organizationSchema} />
+        <JsonLd data={websiteSchema} />
+        <JsonLd data={siteNavigationSchema} />
+        <ContactModalProvider>{children}</ContactModalProvider>
+      </body>
     </html>
   );
 }

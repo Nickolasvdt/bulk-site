@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { faqSchema } from "@/lib/seo/schema";
 
 const faqs = [
   {
     q: "O que é a Bulk?",
-    a: "A Bulk é uma agência digital focada em negócios locais em São Paulo. Ajudamos barbearias, restaurantes, salões, lojas e prestadores de serviço a aparecerem online, serem encontrados no Google e atenderem clientes automaticamente pelo WhatsApp.",
+    a: "A Bulk é uma agência digital focada em negócios locais em São Paulo. Cuidamos da presença digital completa: criação de sites, gestão de tráfego, social media, Google Meu Negócio, IA no WhatsApp e manutenção — para o seu negócio ser encontrado, escolhido e vender todo dia.",
   },
   {
     q: "Quanto tempo leva para o site ficar no ar?",
@@ -25,16 +27,16 @@ const faqs = [
     a: "Atendemos principalmente negócios locais em São Paulo: barbearias, salões de beleza, restaurantes e cafeterias, lojas físicas, clínicas e consultórios, academias, oficinas mecânicas e prestadores de serviços em geral.",
   },
   {
-    q: "A manutenção mensal está inclusa nos planos?",
-    a: "Sim. Todos os nossos planos incluem manutenção mensal: atualizações de segurança, relatório de desempenho, pequenas alterações de conteúdo e suporte prioritário. Seu site nunca fica desatualizado ou quebrado.",
+    q: "Como funciona a manutenção mensal?",
+    a: "A manutenção mensal inclui atualizações de segurança, relatório de desempenho, pequenas alterações de conteúdo e suporte prioritário. É um serviço contínuo opcional para o seu site nunca ficar desatualizado ou quebrado.",
   },
   {
     q: "Como funciona o suporte?",
-    a: "Atendemos por WhatsApp e e-mail. Para clientes com plano ativo, o suporte é prioritário com resposta em até 2 horas úteis. Emergências (site fora do ar) têm resposta em até 1 hora.",
+    a: "Atendemos por WhatsApp e e-mail. Para clientes com contrato ativo, o suporte é prioritário com resposta em até 2 horas úteis. Emergências, como site fora do ar, têm resposta em até 1 hora.",
   },
   {
-    q: "Qual é o investimento?",
-    a: "Nossos planos começam a partir de R$297/mês para o plano básico de site + manutenção. O plano completo (site + IA + Google + manutenção) tem condições especiais. Fale com a gente para um diagnóstico gratuito e proposta personalizada.",
+    q: "Como funciona o orçamento?",
+    a: "Cada negócio é único, então não trabalhamos com pacotes engessados. Você fala com a gente, fazemos um diagnóstico gratuito e montamos uma proposta sob medida para o que o seu negócio precisa — só os serviços que fazem sentido para você.",
   },
   {
     q: "Vocês atendem negócios fora de São Paulo?",
@@ -51,6 +53,7 @@ export function FaqSection() {
 
   return (
     <section className="bg-bg py-16 md:py-24">
+      <JsonLd data={faqSchema(faqs.map((f) => ({ q: f.q, a: f.a })))} />
       <div className="max-w-[1280px] mx-auto px-6 md:px-8">
         {/* Header */}
         <div className="mb-12">

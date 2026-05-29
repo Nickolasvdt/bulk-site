@@ -11,7 +11,7 @@ export function AnnouncementBar() {
       <p className="text-[12px] font-mono tracking-[0.12em] uppercase text-center">
         <span className="font-semibold">Novo:</span>{" "}
         IA no WhatsApp disponível para o seu negócio{" "}
-        <a href="#contato" className="underline underline-offset-2 hover:no-underline ml-1">
+        <a href="/servicos/ia-no-whatsapp" className="underline underline-offset-2 hover:no-underline ml-1">
           Saiba mais →
         </a>
       </p>

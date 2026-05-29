@@ -1,17 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
+import { SERVICES } from "@/lib/site-config";
 
 const footerLinks = {
-  "Serviços": [
-    { label: "Site Profissional", href: "#como-funciona" },
-    { label: "IA no WhatsApp", href: "#como-funciona" },
-    { label: "Google Meu Negócio", href: "#como-funciona" },
-    { label: "Manutenção Mensal", href: "#planos" },
-  ],
+  "Serviços": SERVICES.map((s) => ({ label: s.name, href: `/servicos/${s.slug}` })),
   "Empresa": [
     { label: "A Bulk", href: "#sobre" },
-    { label: "Blog", href: "#blog" },
+    { label: "Blog", href: "/blog" },
+    { label: "Solicitar orçamento", href: "/orcamento" },
     { label: "Contato", href: "#contato" },
-    { label: "Agendar diagnóstico", href: "#contato" },
   ],
   "Legal": [
     { label: "Termos de Uso", href: "#" },
@@ -43,13 +40,13 @@ export function Footer() {
                 {title}
               </h4>
               {links.map((link) => (
-                <a
+                <Link
                   key={link.href + link.label}
                   href={link.href}
                   className="text-[13px] text-bg/55 hover:text-bg transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           ))}

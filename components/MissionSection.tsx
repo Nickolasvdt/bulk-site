@@ -23,7 +23,7 @@ function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
   }, [inView, target]);
 
   return (
-    <div ref={ref} className="font-display font-semibold text-[clamp(56px,10vw,120px)] leading-none tracking-[-0.04em] text-bg">
+    <div ref={ref} className="font-display font-bold text-[clamp(56px,10vw,120px)] leading-none tracking-[-0.04em] text-bg">
       {val.toLocaleString("pt-BR")}{suffix}
     </div>
   );
@@ -56,19 +56,20 @@ export function MissionSection() {
           Nossa missão
         </p>
 
-        <h2 className="font-display font-semibold text-[clamp(24px,3.5vw,44px)] leading-[1.1] tracking-[-0.025em] text-bg max-w-2xl">
+        <h2 className="font-display font-bold text-[clamp(24px,3.5vw,44px)] leading-[1.1] tracking-[-0.025em] text-bg max-w-2xl">
           Colocar todo negócio local<br />
           <span className="font-display italic text-accent">visível no digital.</span>
         </h2>
 
-        <p className="text-[14px] text-bg/45 mt-5 max-w-md">
-          Em São Paulo, chegamos lá.
+        <p className="text-[15px] text-bg/55 mt-5 max-w-md leading-relaxed">
+          Todo negócio local merece ser encontrado por quem precisa dele. É isso que construímos,
+          todo dia, aqui em São Paulo.
         </p>
 
         <div className="mt-12 flex flex-col items-center gap-2">
-          <Counter target={200} suffix="+" />
+          <Counter target={100} suffix="%" />
           <p className="text-[14px] font-mono tracking-[0.1em] uppercase text-bg/50">
-            negócios já aparecem online
+            foco em negócio local
           </p>
         </div>
 

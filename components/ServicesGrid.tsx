@@ -1,71 +1,47 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
-
-const services = [
-  {
-    label: "Site",
-    name: "PROFISSIONAL",
-    desc: "Participe de experiências imersivas com design sob medida, mobile-first e velocidade máxima. No ar em 7 dias, com domínio e hospedagem inclusos.",
-    href: "#como-funciona",
-  },
-  {
-    label: "IA no",
-    name: "WHATSAPP",
-    desc: "Conecte-se com seus clientes 24h por dia. Agente que responde, qualifica e agenda automaticamente pelo WhatsApp.",
-    href: "#como-funciona",
-  },
-  {
-    label: "Google",
-    name: "MEU NEGÓCIO",
-    desc: "Acesse a presença local completa: configuração, otimização e monitoramento. Apareça primeiro quando buscam perto de você.",
-    href: "#como-funciona",
-  },
-  {
-    label: "Manutenção",
-    name: "MENSAL",
-    desc: "Atualizações, relatório mensal e suporte contínuo. Seu site sempre no ar, sempre atualizado, sem preocupação.",
-    href: "#planos",
-  },
-];
+import { SERVICES } from "@/lib/site-config";
 
 export function ServicesGrid() {
   return (
-    <section className="bg-bg py-16 border-b border-rule">
+    <section id="servicos" className="bg-bg py-16 md:py-20 border-b border-rule">
       <div className="max-w-[1280px] mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-rule">
-          {services.map((s, i) => (
+        <div className="mb-10">
+          <p className="txt-eyebrow text-accent mb-3">O que fazemos</p>
+          <h2 className="txt-display text-3xl md:text-4xl text-ink max-w-2xl">
+            Tudo que seu negócio precisa para ser encontrado e vender online
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule rounded-2xl overflow-hidden">
+          {SERVICES.map((s, i) => (
             <motion.div
-              key={i}
+              key={s.slug}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-5%" }}
-              transition={{ duration: 0.45, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col gap-4 p-8 group"
+              transition={{ duration: 0.45, delay: (i % 3) * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              className="flex flex-col gap-4 p-7 md:p-8 bg-bg group"
             >
-              {/* Logo prefix */}
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-[11px] font-mono text-mute uppercase tracking-[0.1em]">Bulk</span>
-              </div>
-
+              <span className="text-2xl text-accent" aria-hidden="true">{s.icon}</span>
               <div>
-                <p className="text-[11px] font-mono tracking-[0.12em] text-mute uppercase">{s.label}</p>
-                <h3 className="font-display font-semibold text-[22px] tracking-[-0.02em] text-ink mt-0.5">
+                <p className="text-[11px] font-mono tracking-[0.12em] text-mute uppercase">{s.short}</p>
+                <h3 className="font-display font-bold text-[22px] tracking-[-0.02em] text-ink mt-1">
                   {s.name}
                 </h3>
               </div>
-
-              <p className="text-[13px] leading-[1.65] text-mute flex-1">{s.desc}</p>
-
-              <a
-                href={s.href}
-                className="inline-flex items-center gap-2 text-[12px] font-medium text-accent hover:gap-3 transition-all"
+              <p className="text-[14px] leading-[1.65] text-mute flex-1">{s.description}</p>
+              <Link
+                href={`/servicos/${s.slug}`}
+                className="inline-flex items-center gap-2 text-[13px] font-semibold text-accent hover:gap-3 transition-all"
               >
                 Explorar
                 <svg className="w-3 h-3" viewBox="0 0 14 14" fill="none">
-                  <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M1 7h12M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>

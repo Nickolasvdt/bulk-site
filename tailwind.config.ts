@@ -10,7 +10,7 @@ const config: Config = {
       colors: {
         bg: "#FFFFFF",      // white
         ink: "#050707",     // brand near-black
-        mute: "#6B6B6B",    // neutral grey
+        mute: "#4A4A4A",    // neutral grey (escurecido p/ contraste AA)
         accent: "#7a0000",  // brand deep red
         sun: "#420000",     // brand darkest red
         rule: "#05070714",  // ink at 8%

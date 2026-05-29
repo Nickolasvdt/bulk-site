@@ -53,10 +53,43 @@ body {
 
 .txt-display {
   font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 0.92;
+  font-weight: 700;
+  line-height: 0.94;
   letter-spacing: -0.03em;
 }
+
+/* Conteúdo de artigos (MDX) */
+.prose-bulk h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: #050707;
+  margin-top: 2.2rem;
+  margin-bottom: 0.85rem;
+}
+.prose-bulk h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #050707;
+  margin-top: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+.prose-bulk p {
+  margin-bottom: 1.1rem;
+  font-size: 1.0625rem;
+}
+.prose-bulk ul,
+.prose-bulk ol {
+  margin: 0 0 1.2rem 1.25rem;
+  list-style: disc;
+}
+.prose-bulk ol { list-style: decimal; }
+.prose-bulk li { margin-bottom: 0.5rem; }
+.prose-bulk strong { font-weight: 700; color: #050707; }
+.prose-bulk a { color: #7a0000; text-decoration: underline; text-underline-offset: 2px; }
 
 /* Swiper overrides — G4-style */
 .swiper-button-prev,
