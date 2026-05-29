@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Geist, Geist_Mono } from "next/font/google";
-import { SmoothScroll } from "@/components/ui/SmoothScroll";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import "./globals.css";
 
 const display = Bricolage_Grotesque({
@@ -27,31 +25,19 @@ const mono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Bulk — Presença digital para negócio local crescer",
-  description:
-    "Site profissional, IA no WhatsApp e Google Meu Negócio. Sua empresa encontrada, escolhida e faturando todo dia.",
+  description: "Site profissional, IA no WhatsApp e Google Meu Negócio. Sua empresa encontrada, escolhida e faturando todo dia.",
   openGraph: {
     title: "Bulk — Presença digital para negócio local crescer",
-    description:
-      "Site profissional, IA no WhatsApp e Google Meu Negócio. Sua empresa encontrada todo dia.",
+    description: "Site profissional, IA no WhatsApp e Google Meu Negócio. Sua empresa encontrada todo dia.",
     type: "website",
     locale: "pt_BR",
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${display.variable} ${sans.variable} ${mono.variable}`}
-    >
-      <body>
-        <ScrollProgress />
-        <SmoothScroll>{children}</SmoothScroll>
-      </body>
+    <html lang="pt-BR" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
