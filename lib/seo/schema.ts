@@ -18,6 +18,7 @@ export const organizationSchema = {
     addressRegion: SITE.region,
     addressCountry: SITE.country,
   },
+  sameAs: [`https://instagram.com/${SITE.instagram}`],
 };
 
 export const websiteSchema = {

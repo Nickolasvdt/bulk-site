@@ -3,9 +3,9 @@ export const SITE = {
   legalName: "Bulk Studio",
   url: "https://bulkstudio.com.br",
   email: "contato@bulkstudio.com.br",
-  // PLACEHOLDERS — trocar pelos dados reais antes de publicar:
-  whatsapp: "5511999999999",
-  whatsappDisplay: "(11) 99999-9999",
+  whatsapp: "5511988055072",
+  whatsappDisplay: "(11) 98805-5072",
+  instagram: "studio.bulk",
   city: "São Paulo",
   region: "SP",
   country: "BR",

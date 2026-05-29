@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 import { MobileBottomNav } from "@/components/ui/MobileBottomNav";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 const display = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -70,6 +71,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <AnnouncementBar />
           <WhatsAppFloat />
           <MobileBottomNav />
+          <CookieConsent />
         </ContactModalProvider>
       </body>
     </html>

@@ -109,6 +109,10 @@ export function HeroCarousel() {
 
   return (
     <section className="relative bg-ink text-bg min-h-screen">
+      <h1 className="sr-only">
+        Bulk — Agência digital para negócio local em São Paulo: criação de sites, gestão de
+        tráfego, social media, Google Meu Negócio, IA no WhatsApp e manutenção.
+      </h1>
       <Swiper
         modules={[Autoplay, Navigation]}
         slidesPerView={1}
@@ -141,9 +145,9 @@ export function HeroCarousel() {
                     {slide.label}
                   </p>
                   <div className="w-8 h-px bg-bg/20 mb-6" />
-                  <h1 className="font-display font-semibold text-[clamp(38px,5.5vw,72px)] leading-[0.92] tracking-[-0.03em] whitespace-pre-line max-w-lg">
+                  <p className="font-display font-bold text-[clamp(38px,5.5vw,72px)] leading-[0.92] tracking-[-0.03em] whitespace-pre-line max-w-lg">
                     {slide.headline}
-                  </h1>
+                  </p>
                   <p className="mt-7 text-[15px] leading-[1.65] text-bg/50 max-w-[360px]">
                     {slide.desc}
                   </p>
