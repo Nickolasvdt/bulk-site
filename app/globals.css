@@ -90,6 +90,11 @@ body {
 .prose-bulk li { margin-bottom: 0.5rem; }
 .prose-bulk strong { font-weight: 700; color: #050707; }
 .prose-bulk a { color: #7a0000; text-decoration: underline; text-underline-offset: 2px; }
+.prose-bulk img {
+  width: 100%;
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+}
 
 /* Swiper overrides — G4-style */
 .swiper-button-prev,

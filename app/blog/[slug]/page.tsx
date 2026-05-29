@@ -22,7 +22,12 @@ export async function generateMetadata(
       title: meta.title,
       description: meta.description,
       alternates: { canonical: `/blog/${slug}` },
-      openGraph: { title: meta.title, description: meta.description, type: "article" },
+      openGraph: {
+        title: meta.title,
+        description: meta.description,
+        type: "article",
+        images: meta.cover ? [meta.cover] : undefined,
+      },
     };
   } catch {
     return {};
@@ -59,7 +64,16 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
 
         <p className="txt-eyebrow text-accent mb-3">{meta.category}</p>
         <h1 className="txt-display text-3xl md:text-5xl text-ink mb-4">{meta.title}</h1>
-        <p className="text-mute text-sm mb-10">{meta.readingMinutes} min de leitura</p>
+        <p className="text-mute text-sm mb-8">{meta.readingMinutes} min de leitura</p>
+
+        {meta.cover && (
+          <div
+            className="h-56 md:h-80 rounded-2xl bg-cover bg-center mb-10"
+            style={{ backgroundImage: `url(${meta.cover})` }}
+            role="img"
+            aria-label={meta.title}
+          />
+        )}
 
         <div className="prose-bulk text-ink/90 leading-relaxed">
           <MDXRemote source={content} />

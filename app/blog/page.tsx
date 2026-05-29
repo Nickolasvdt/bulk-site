@@ -31,14 +31,22 @@ export default function BlogIndex() {
               <Reveal key={p.slug} delay={i * 0.06} as="div">
                 <Link
                   href={`/blog/${p.slug}`}
-                  className="group block h-full p-6 rounded-2xl border border-rule hover:border-accent transition"
+                  className="group flex flex-col h-full rounded-2xl border border-rule hover:border-accent transition overflow-hidden"
                 >
-                  <span className="txt-eyebrow text-accent">{p.category}</span>
-                  <h2 className="txt-display text-xl text-ink mt-2 mb-2 group-hover:text-accent transition">
-                    {p.title}
-                  </h2>
-                  <p className="text-mute text-sm">{p.description}</p>
-                  <p className="text-mute text-xs mt-4">{p.readingMinutes} min de leitura</p>
+                  {p.cover && (
+                    <div
+                      className="h-44 bg-cover bg-center"
+                      style={{ backgroundImage: `url(${p.cover})` }}
+                    />
+                  )}
+                  <div className="flex flex-col flex-1 p-6">
+                    <span className="txt-eyebrow text-accent">{p.category}</span>
+                    <h2 className="txt-display text-xl text-ink mt-2 mb-2 group-hover:text-accent transition">
+                      {p.title}
+                    </h2>
+                    <p className="text-mute text-sm">{p.description}</p>
+                    <p className="text-mute text-xs mt-auto pt-4">{p.readingMinutes} min de leitura</p>
+                  </div>
                 </Link>
               </Reveal>
             ))}
