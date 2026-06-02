@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Manrope, DM_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site-config";
 import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
@@ -19,7 +19,7 @@ const display = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const sans = Manrope({
+const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["400", "500", "600", "700"],
