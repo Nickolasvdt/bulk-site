@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Inter, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site-config";
 import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
@@ -26,7 +26,7 @@ const sans = Inter({
   display: "swap",
 });
 
-const mono = Geist_Mono({
+const mono = DM_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   weight: ["400", "500"],
