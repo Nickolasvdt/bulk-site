@@ -7,7 +7,7 @@ export function AnnouncementBar() {
   if (dismissed) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 bg-accent text-bg py-2.5 px-4 pb-20 md:pb-2.5 flex items-center justify-center gap-3">
+    <div className="fixed bottom-0 left-0 right-0 z-40 bg-accent text-bg py-2.5 px-4 flex items-center justify-center gap-3">
       <p className="text-[12px] font-mono tracking-[0.12em] uppercase text-center">
         <span className="font-semibold">Novo:</span>{" "}
         IA no WhatsApp disponível para o seu negócio{" "}

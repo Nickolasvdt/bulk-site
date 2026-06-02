@@ -9,7 +9,6 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { AnnouncementBar } from "@/components/AnnouncementBar";
 import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
-import { MobileBottomNav } from "@/components/ui/MobileBottomNav";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 
 const display = Plus_Jakarta_Sans({
@@ -70,7 +69,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <AnnouncementBar />
           <WhatsAppFloat />
-          <MobileBottomNav />
           <CookieConsent />
         </ContactModalProvider>
       </body>
