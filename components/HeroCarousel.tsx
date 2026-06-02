@@ -140,7 +140,7 @@ export function HeroCarousel() {
 
               {/* Content — centrado com max 85% da largura */}
               <div className="relative z-10 h-full max-w-[1280px] mx-auto px-6 md:px-8 flex items-center">
-                <div className="w-full lg:w-[50%] pt-24 pb-16 flex flex-col justify-center">
+                <div className="w-full lg:w-[50%] pt-24 pb-24 lg:pb-16 flex flex-col justify-center">
                   <p className="text-[12px] font-mono tracking-[0.22em] uppercase text-bg/35 mb-6">
                     {slide.label}
                   </p>
