@@ -36,13 +36,23 @@ function StatCounter({
 }
 
 export function StatsSection() {
+  const stats = [
+    { value: 7,  suffix: " dias", label: "Para o site no ar" },
+    { value: 24, suffix: "h",     label: "Atendimento com IA" },
+    { value: 6,  suffix: "",      label: "Serviços para crescer" },
+  ];
+
   return (
     <section className="bg-accent">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-bg/20">
-          <StatCounter value={7}  suffix=" dias" label="Para o site no ar" />
-          <StatCounter value={24} suffix="h" label="Atendimento com IA" />
-          <StatCounter value={6}  suffix="" label="Serviços para crescer" />
+      <div className="max-w-[1280px] mx-auto">
+        <div className="overflow-x-auto md:overflow-visible no-scrollbar">
+          <div className="flex md:grid md:grid-cols-3 divide-x divide-bg/20 min-w-max md:min-w-0">
+            {stats.map((s) => (
+              <div key={s.label} className="min-w-[min(200px,65vw)] md:min-w-0">
+                <StatCounter value={s.value} suffix={s.suffix} label={s.label} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
