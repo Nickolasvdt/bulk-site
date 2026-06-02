@@ -1,11 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
-  <!-- Paw print with SVG paths -->
-  <ellipse cx="17" cy="26" rx="7" ry="9" fill="#1a1a1a"/>
-  <ellipse cx="8"  cy="18" rx="3.5" ry="4.5" fill="#1a1a1a"/>
-  <ellipse cx="14" cy="13" rx="3" ry="4" fill="#1a1a1a"/>
-  <ellipse cx="20" cy="13" rx="3" ry="4" fill="#1a1a1a"/>
-  <ellipse cx="26" cy="18" rx="3.5" ry="4.5" fill="#1a1a1a"/>
-  <!-- Wordmark -->
-  <text x="38" y="27" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">TecPet</text>
-  <text x="38" y="39" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="500" fill="#666" letter-spacing="1.8">LOGÍSTICA</text>
+  <text x="0" y="30" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#111111" letter-spacing="-0.4">TecPet</text>
+  <text x="0" y="46" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="500" fill="#444444" letter-spacing="2.5">LOGÍSTICA</text>
 </svg>

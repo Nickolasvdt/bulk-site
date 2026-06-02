@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter, DM_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans, Manrope, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site-config";
 import { ContactModalProvider } from "@/components/contact/ContactModalProvider";
@@ -12,14 +12,14 @@ import { WhatsAppFloat } from "@/components/ui/WhatsAppFloat";
 import { MobileBottomNav } from "@/components/ui/MobileBottomNav";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 
-const display = Bricolage_Grotesque({
+const display = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-display",
-  weight: ["500", "600", "700", "800"],
+  weight: ["600", "700", "800"],
   display: "swap",
 });
 
-const sans = Inter({
+const sans = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
   weight: ["400", "500", "600", "700"],
