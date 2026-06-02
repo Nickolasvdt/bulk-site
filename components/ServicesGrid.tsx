@@ -15,7 +15,8 @@ export function ServicesGrid() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule rounded-2xl overflow-hidden">
+        <div className="overflow-x-auto sm:overflow-visible no-scrollbar -mx-6 px-6 sm:mx-0 sm:px-0">
+          <div className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-rule border border-rule rounded-2xl overflow-hidden min-w-max sm:min-w-0">
           {SERVICES.map((s, i) => (
             <motion.div
               key={s.slug}
@@ -23,7 +24,7 @@ export function ServicesGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-5%" }}
               transition={{ duration: 0.45, delay: (i % 3) * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col gap-4 p-7 md:p-8 bg-bg group"
+              className="flex flex-col gap-4 p-7 md:p-8 bg-bg group min-w-[min(280px,72vw)] sm:min-w-0"
             >
               <span className="text-2xl text-accent" aria-hidden="true">{s.icon}</span>
               <div>
@@ -44,6 +45,7 @@ export function ServicesGrid() {
               </Link>
             </motion.div>
           ))}
+          </div>
         </div>
       </div>
     </section>
