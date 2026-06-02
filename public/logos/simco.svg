@@ -1,6 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 48" fill="none">
-  <rect x="0" y="14" width="6" height="20" rx="3" fill="#1a3a5c"/>
-  <rect x="10" y="8" width="6" height="32" rx="3" fill="#1a3a5c"/>
-  <rect x="20" y="14" width="6" height="20" rx="3" fill="#1a3a5c"/>
-  <text x="36" y="31" font-family="Arial, sans-serif" font-size="18" font-weight="800" fill="#1a3a5c" letter-spacing="1">SIMCO</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <!-- S lettermark with bars -->
+  <rect x="2"  y="28" width="7" height="12" rx="2" fill="#1a1a1a"/>
+  <rect x="13" y="18" width="7" height="22" rx="2" fill="#1a1a1a"/>
+  <rect x="24" y="8"  width="7" height="32" rx="2" fill="#1a1a1a"/>
+  <!-- Wordmark -->
+  <text x="38" y="31" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="800" fill="#1a1a1a" letter-spacing="1">SIMCO</text>
 </svg>

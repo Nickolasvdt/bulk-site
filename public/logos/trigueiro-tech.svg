@@ -1,6 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
-  <rect x="0" y="12" width="24" height="24" rx="5" fill="#1a1a1a"/>
-  <text x="12" y="29" font-family="monospace" font-size="14" font-weight="700" fill="white" text-anchor="middle">T</text>
-  <text x="34" y="32" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a" letter-spacing="-0.5">Trigueiro</text>
-  <text x="34" y="44" font-family="Arial, sans-serif" font-size="9" font-weight="400" fill="#666" letter-spacing="2">TECH</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none">
+  <!-- Monitor icon -->
+  <rect x="2" y="6" width="30" height="22" rx="3" stroke="#1a1a1a" stroke-width="2.5" fill="none"/>
+  <line x1="17" y1="28" x2="17" y2="36" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="11" y1="36" x2="23" y2="36" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="9" cy="11" r="1.5" fill="#1a1a1a"/>
+  <line x1="13" y1="11" x2="27" y2="11" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="9" y1="15" x2="27" y2="15" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="9" y1="19" x2="21" y2="19" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Wordmark -->
+  <text x="40" y="31" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">Trigueiro</text>
+  <text x="40" y="43" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="500" fill="#666" letter-spacing="2.5">TECH</text>
 </svg>

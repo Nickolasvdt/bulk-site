@@ -4,13 +4,13 @@ import { useRef } from "react";
 import { useInView, motion } from "motion/react";
 
 const sectors = [
-  { name: "Automotivo",  pct: 6,  height: 25 },
-  { name: "Fitness",     pct: 8,  height: 32 },
-  { name: "Outros",      pct: 9,  height: 36 },
-  { name: "Saúde",       pct: 11, height: 45 },
-  { name: "Varejo",      pct: 12, height: 50 },
-  { name: "Beleza",      pct: 14, height: 60 },
-  { name: "Alimentação", pct: 18, height: 76 },
+  { name: "Automotivo",  pct: 6,  height: 27 },
+  { name: "Fitness",     pct: 8,  height: 36 },
+  { name: "Outros",      pct: 9,  height: 41 },
+  { name: "Saúde",       pct: 10, height: 45 },
+  { name: "Varejo",      pct: 12, height: 55 },
+  { name: "Beleza",      pct: 15, height: 68 },
+  { name: "Alimentação", pct: 18, height: 82 },
   { name: "Serviços",    pct: 22, height: 100 },
 ];
 

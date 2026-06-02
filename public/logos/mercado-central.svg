@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none">
-  <rect x="2" y="20" width="28" height="18" rx="2" fill="none" stroke="#2a6e3f" stroke-width="2"/>
-  <path d="M2 20 L16 8 L30 20" fill="none" stroke="#2a6e3f" stroke-width="2" stroke-linejoin="round"/>
-  <text x="38" y="27" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">Mercado</text>
-  <text x="38" y="40" font-family="Arial, sans-serif" font-size="10" font-weight="400" fill="#888" letter-spacing="2">CENTRAL</text>
+  <!-- Store/building icon -->
+  <rect x="4" y="20" width="30" height="18" rx="2" stroke="#1a1a1a" stroke-width="2.5" fill="none"/>
+  <path d="M2 22 L19 8 L36 22" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Door -->
+  <rect x="15" y="29" width="8" height="9" rx="1" stroke="#1a1a1a" stroke-width="2" fill="none"/>
+  <!-- Windows -->
+  <rect x="7"  y="27" width="5" height="5" rx="1" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+  <rect x="26" y="27" width="5" height="5" rx="1" stroke="#1a1a1a" stroke-width="1.5" fill="none"/>
+  <!-- Wordmark -->
+  <text x="44" y="27" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#1a1a1a" letter-spacing="-0.3">Mercado</text>
+  <text x="44" y="40" font-family="Arial, Helvetica, sans-serif" font-size="9.5" font-weight="500" fill="#666" letter-spacing="2">CENTRAL</text>
 </svg>
