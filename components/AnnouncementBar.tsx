@@ -5,11 +5,8 @@ import { useEffect, useState } from "react";
 export function AnnouncementBar() {
   const [dismissed, setDismissed] = useState(false);
   useEffect(() => {
-    document.documentElement.style.setProperty('--ann-bar-h', '44px');
-    return () => {
-      document.documentElement.style.setProperty('--ann-bar-h', '0px');
-    };
-  }, []);
+    document.documentElement.style.setProperty('--ann-bar-h', dismissed ? '0px' : '44px');
+  }, [dismissed]);
 
   if (dismissed) return null;
 
