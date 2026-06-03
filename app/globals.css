@@ -4,6 +4,7 @@
 
 :root {
   color-scheme: light;
+  --ann-bar-h: 44px;
 }
 
 html {

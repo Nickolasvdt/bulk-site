@@ -14,7 +14,10 @@ export function WhatsAppFloat() {
   }, []);
 
   return (
-    <div className="fixed right-5 bottom-28 md:bottom-20 z-[60] flex flex-col items-end gap-3">
+    <div
+      className="fixed right-5 z-[60] flex flex-col items-end gap-3 transition-[bottom] duration-300"
+      style={{ bottom: 'calc(var(--ann-bar-h, 44px) + 20px)' }}
+    >
       <AnimatePresence>
         {showBubble && (
           <motion.a
