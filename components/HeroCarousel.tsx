@@ -117,7 +117,7 @@ export function HeroCarousel() {
         modules={[Autoplay, Navigation]}
         slidesPerView={1}
         loop
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        autoplay={{ delay: 8000, disableOnInteraction: false }}
         onSwiper={(swiper) => { swiperRef.current = swiper; }}
         className="h-screen min-h-[600px]"
       >
