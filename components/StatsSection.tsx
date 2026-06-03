@@ -26,33 +26,33 @@ function StatCounter({
   }, [inView, value]);
 
   return (
-    <div ref={ref} className="flex flex-col items-center gap-2 py-12 px-8">
-      <div className="font-display font-bold text-[clamp(48px,7vw,80px)] leading-none tracking-[-0.04em] text-bg">
+    <div ref={ref} className="flex flex-col items-center gap-1 md:gap-2 py-8 md:py-12 px-2 md:px-8">
+      <div className="font-display font-bold text-[clamp(24px,6vw,80px)] leading-none tracking-[-0.04em] text-bg">
         {display}{suffix}
       </div>
-      <p className="text-[11px] font-mono tracking-[0.18em] uppercase text-bg/50">{label}</p>
+      <p className="text-[9px] md:text-[11px] font-mono tracking-[0.1em] md:tracking-[0.18em] uppercase text-bg/50 text-center leading-tight">
+        {label}
+      </p>
     </div>
   );
 }
 
-export function StatsSection() {
-  const stats = [
-    { value: 7,  suffix: " dias", label: "Para o site no ar" },
-    { value: 24, suffix: "h",     label: "Atendimento com IA" },
-    { value: 6,  suffix: "",      label: "Serviços para crescer" },
-  ];
+const stats = [
+  { value: 7,  suffix: " dias", label: "Para o site no ar" },
+  { value: 24, suffix: "h",     label: "Atendimento com IA" },
+  { value: 6,  suffix: "",      label: "Serviços para crescer" },
+];
 
+export function StatsSection() {
   return (
     <section className="bg-accent">
-      <div className="max-w-[1280px] mx-auto">
-        <div className="overflow-x-auto md:overflow-visible no-scrollbar">
-          <div className="flex md:grid md:grid-cols-3 divide-x divide-bg/20 min-w-max md:min-w-0">
-            {stats.map((s) => (
-              <div key={s.label} className="min-w-[min(200px,65vw)] md:min-w-0">
-                <StatCounter value={s.value} suffix={s.suffix} label={s.label} />
-              </div>
-            ))}
-          </div>
+      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
+        <div className="flex divide-x divide-bg/20">
+          {stats.map((s) => (
+            <div key={s.label} className="flex-1 min-w-0">
+              <StatCounter value={s.value} suffix={s.suffix} label={s.label} />
+            </div>
+          ))}
         </div>
       </div>
     </section>
