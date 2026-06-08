@@ -84,15 +84,26 @@ export function faqSchema(qa: { q: string; a: string }[]) {
   };
 }
 
-export function articleSchema(p: { title: string; description: string; slug: string; date: string }) {
+export function articleSchema(p: {
+  title: string;
+  description: string;
+  slug: string;
+  date: string;
+  cover?: string;
+}) {
+  const url = `${SITE.url}/blog/${p.slug}`;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: p.title,
     description: p.description,
     datePublished: p.date,
-    url: `${SITE.url}/blog/${p.slug}`,
-    author: { "@type": "Organization", name: SITE.name },
-    publisher: { "@type": "Organization", name: SITE.name },
+    dateModified: p.date,
+    url,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    image: p.cover ? [p.cover] : undefined,
+    inLanguage: "pt-BR",
+    author: { "@type": "Organization", name: SITE.name, url: SITE.url },
+    publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
   };
 }

@@ -28,6 +28,12 @@ export async function generateMetadata(
         type: "article",
         images: meta.cover ? [meta.cover] : undefined,
       },
+      twitter: {
+        card: "summary_large_image",
+        title: meta.title,
+        description: meta.description,
+        images: meta.cover ? [meta.cover] : undefined,
+      },
     };
   } catch {
     return {};
