@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE, SERVICES } from "@/lib/site-config";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts, getTotalPages } from "@/lib/blog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = SITE.url;
@@ -24,5 +24,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...postRoutes];
+  const blogPageRoutes: MetadataRoute.Sitemap = Array.from(
+    { length: Math.max(0, getTotalPages() - 1) },
+    (_, i) => ({
+      url: `${base}/blog/page/${i + 2}`,
+      changeFrequency: "weekly",
+      priority: 0.5,
+    })
+  );
+
+  return [...staticRoutes, ...serviceRoutes, ...blogPageRoutes, ...postRoutes];
 }
